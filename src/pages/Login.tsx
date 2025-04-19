@@ -4,6 +4,8 @@ export default function LoginComponent() {
   const [userInput, setUserInput] = useState('');
 
   useEffect(() => {
+    import('../styles/LoginPage.css'); // 
+    import('../styles/QCStyleEn.css');
     const passwordDiv = document.getElementById('password-step');
     if (passwordDiv) {
       if (userInput.length > 0) {
@@ -21,7 +23,7 @@ export default function LoginComponent() {
         <div className="col-xs-12 hidden-md hidden-lg padding-none position-fixed d-md-none w-full " style={{ top: 0, zIndex: 99, background: 'white' }}>
           <div className="col-xs-12 d-flex padding-20-v align-items-center justify-content-around " style={{ borderBottom: '1px solid #D9D9D9' }}>
             <a href="/en/global/q" className="col-xs-6 padding-none">
-              <img className="col-xs-8 col-sm-6 padding-none w-2/3" src="/content/images/QC-Logo-New.png" alt="QC Logo" />
+              <img className="col-xs-8 col-sm-6 padding-none w-2/3" src="/Content/images/QC-Logo-New.png" alt="QC Logo" />
             </a>
             <div className="col-xs-6 col-sm-4 col-sm-offset-2 d-flex justify-content-end padding-none">
               <a href="/ar/qa/account/login" className="col-xs-6 padding-less change-language LoginMenuA">
