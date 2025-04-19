@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="212.32" height="212.32" viewBox="0 0 212.32 212.32">
+  <defs>
+    <filter id="Ellipse_40" x="0" y="0" width="212.32" height="212.32" filterUnits="userSpaceOnUse">
+      <feOffset dy="20" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#bf892d" flood-opacity="0.188"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_40)">
+    <circle id="Ellipse_40-2" data-name="Ellipse 40" cx="42" cy="42" r="42" transform="matrix(-0.1, -0.99, 0.99, -0.1, 68.78, 132.32)" fill="#fdb933"/>
+  </g>
+</svg>

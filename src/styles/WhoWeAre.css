@@ -1,0 +1,132 @@
+/* Custom Qatar Charity Styles */
+
+/* First letter style for storytelling paragraphs */
+.first-letter-xxl::first-letter {
+    font-size: 4rem;
+    font-weight: bold;
+    float: left;
+    line-height: 0.8;
+    margin-right: 0.5rem;
+    color: #000;
+  }
+  
+  /* Vertical text for mission section */
+  .vertical-text-mission {
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    position: relative;
+    top: 300px;
+    left: 20px;
+  }
+  
+  /* Border lines */
+  .line-top-border {
+    border-top: 1px solid #000;
+  }
+  
+  .line-right-border {
+    border-right: 1px solid #000;
+  }
+  
+  .line-left-border {
+    border-left: 1px solid #000;
+  }
+  
+  .line-bottom-border {
+    border-bottom: 1px solid #000;
+  }
+  
+  /* Vision card styles */
+  .vision-card-height {
+    height: 600px;
+  }
+  
+  .vision-mobile-image {
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Field card image */
+  .field-card-image {
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Bullet points for the list */
+  .bulits-black {
+    position: relative;
+  }
+  
+  .bulits-black::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    border-radius: 50%;
+    top: 0;
+    right: -6px;
+    transform: translateY(-50%);
+  }
+  
+  /* Pillars image size */
+  .img-pillars {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Font Sizes */
+  .xl-font {
+    font-size: 3.5rem;
+  }
+  
+  .xs-font {
+    font-size: 0.75rem;
+    color: #6c757d;
+  }
+  
+  /* PT Serif font for quotes */
+  .f-ptSerif {
+    font-family: 'PT Serif', serif;
+  }
+  
+  /* Z-index classes */
+  .z-index-1 {
+    z-index: 1;
+  }
+  
+  .z-index-n1 {
+    z-index: -1;
+  }
+  
+  /* Custom colors */
+  .text-orange {
+    color: #FF7F00;
+  }
+  
+  .text-green-light {
+    color: #8BC34A;
+  }
+  
+  .text-skay {
+    color: #03A9F4;
+  }
+  
+  .bg-orange {
+    background-color: #FF7F00;
+  }
+  
+  .bg-lighter {
+    background-color: #f8f9fa;
+  }
+  
+  /* Responsive spacings */
+  @media (max-width: 768px) {
+    .first-letter-xxl::first-letter {
+      font-size: 3rem;
+    }
+    
+    .vision-card-height {
+      height: 400px;
+    }
+  }

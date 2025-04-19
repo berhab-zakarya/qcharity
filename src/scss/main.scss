@@ -1,0 +1,22 @@
+// $primary: #b1005f; 
+// $primary: #007bff;
+
+// @import "~bootstrap/scss/bootstrap";
+
+// .bg-gray-rounded {
+//     background: #f2f3f3 0% 0% no-repeat padding-box;
+//     border-radius: 74px;
+//     opacity: 1;
+//     width: 148px;
+//     height: 148px;
+//   }
+// @import '../qc.global.css'
+
+
+// 🔵 تخصيص اللون الأساسي قبل استيراد Bootstrap
+$primary: #b1005f;
+
+@import "bootstrap/scss/bootstrap";
+
+// ممكن تزيد هنا global styles
+

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="72" viewBox="0 0 72 72">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_4832" data-name="Rectangle 4832" width="32" height="14" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Circle_BTN" data-name="Circle BTN" transform="translate(72) rotate(90)">
+    <circle id="Ellipse_25" data-name="Ellipse 25" cx="36" cy="36" r="36" fill="#b10c5f"/>
+    <g id="Arrow" transform="translate(20 29)" clip-path="url(#clip-path)">
+      <path id="Path_16210" data-name="Path 16210" d="M3.414,19.988H9a1.278,1.278,0,0,1,.223.025,1.04,1.04,0,0,1,.7,1.358,1.018,1.018,0,0,1-.812.611A.832.832,0,0,1,9,21.988H.944a.821.821,0,0,1-.111-.013A1.023,1.023,0,0,1,.006,21.1,1.037,1.037,0,0,1,0,20.988v-8a1.036,1.036,0,0,1,1.383-.924,1.023,1.023,0,0,1,.611.812A1.051,1.051,0,0,1,2,12.988v5.586L20.294.28a1.94,1.94,0,0,1,.175-.139,1.028,1.028,0,0,1,1.476.516,1.011,1.011,0,0,1-.1.862,1.964,1.964,0,0,1-.14.176L3.414,19.988Z" transform="translate(15.504 22.586) rotate(-135)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

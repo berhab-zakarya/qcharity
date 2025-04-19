@@ -1,0 +1,264 @@
+.background-index {
+  background-image: url("/hero.webp");
+}
+
+@media (min-width: 768px) {
+  .background-index {
+    background-image: url("/hero.webp");
+  }
+}
+.bg-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.bg-center {
+  background-position: center center;
+}
+
+/* Pink background color */
+.bg-pink-100 {
+  background-color: #F7E5EF;
+}
+
+/* Main banner circle styling */
+.main-banner-circle {
+  width: 400px;
+  height: 400px;
+  background-color: #c6007e;
+  opacity: 0.9;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+}
+
+/* Small yellow circle */
+.small-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #fdb933;
+}
+
+/* Custom utility classes */
+.self-sm-center {
+  align-self: flex-end;
+}
+
+@media (min-width: 640px) {
+  .self-sm-center {
+    align-self: center !important;
+  }
+}
+
+/* Container fluid */
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Bootstrap equivalent classes */
+.ms-3 {
+  margin-left: 0.75rem;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/* Extra spacing utility */
+@media (min-width: 1200px) {
+  .px-xl-5 {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .px-xxl-10 {
+    padding-left: 3.75rem !important;
+    padding-right: 3.75rem !important;
+  }
+}
+
+.bg-cover.bg-cover-center {
+    background-position: center center;
+  }
+  
+  .bg-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  @media (min-width: 768px) {
+    .background-index {
+      background-image: url(/hero.webp);
+    }
+  }
+  
+  .background-index {
+    background-image: url(/hero.webp);
+  }
+  
+  @media (min-width: 1400px) {
+    .px-xxl-10 {
+      padding-right: 3.75rem !important;
+      padding-left: 3.75rem !important;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .px-xl-5 {
+      padding-right: 1.25rem !important;
+      padding-left: 1.25rem !important;
+    }
+  }
+  
+  .main-banner-circle {
+    background-color: rgba(198, 0, 126, 0.9);
+    width: 400px;
+    height: 400px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .small-circle {
+    background-color: #ffc107;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .mt-8 {
+    margin-top: 2rem;
+  }
+  
+  .mt-n10 {
+    margin-top: -2.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .mt-md-n12 {
+      margin-top: -3rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .mt-lg-n13 {
+      margin-top: -3.25rem;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .mt-xl-n14 {
+      margin-top: -3.5rem;
+    }
+  }
+  
+  .ms-7 {
+    margin-left: 1.75rem;
+  }
+  
+  @media (min-width: 576px) {
+    .ms-sm-0 {
+      margin-left: 0 !important;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .ms-lg-7 {
+      margin-left: 1.75rem !important;
+    }
+  }
+  
+  .gx-10 {
+    --bs-gutter-x: 2.5rem;
+  }
+  
+  @media (min-width: 576px) {
+    .gx-sm-9 {
+      --bs-gutter-x: 2.25rem;
+    }
+  }
+  
+  .fw-bold {
+    font-weight: 700 !important;
+  }
+  
+  .fw-normal {
+    font-weight: 400 !important;
+  }
+  
+  .text-uppercase {
+    text-transform: uppercase !important;
+  }
+  
+  .display-1 {
+    font-size: 5rem;
+    line-height: 1.2;
+  }
+  
+  .display-3 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+  
+  .display-5 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  .text-decoration-none {
+    text-decoration: none !important;
+  }
+  
+  .text-nowrap {
+    white-space: nowrap !important;
+  }
+  
+  .float-start {
+    float: left !important;
+  }
+  
+  .float-end {
+    float: right !important;
+  }
+  
+  @media (min-width: 768px) {
+    .float-md-start {
+      float: left !important;
+    }
+  }
+  
+  .elemAnimateOnScroll {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+    }
+    
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(255, 193, 7, 0);
+    }
+    
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+    }
+  }
+  

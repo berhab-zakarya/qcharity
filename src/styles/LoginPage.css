@@ -1,0 +1,308 @@
+/* LoginPage.css */
+
+/* Login page specific styles */
+.login,
+.image {
+    min-height: 100vh;
+}
+
+.form-control:focus {
+    border-color: #E00570;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
+.divider {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.divider:before,
+.divider:after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #D9D9D9;
+    flex: 1;
+}
+
+.divider span {
+    text-align: center;
+    padding: 0 25px;
+    z-index: 1;
+}
+
+.logo-border {
+    border: 1px #D9D9D9 solid;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.language-border {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px #D9D9D9 solid;
+}
+
+.text-danger {
+    color: #F75010;
+}
+
+.backgroud_overlay {
+    background-image: url('../../public/content/images/newLoginImages/banner_with_overlay_compressed.webp');
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+/* OTP Form Styles */
+.otp-form .input {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border: 1px solid #D9D9D9;
+    text-align: center;
+    margin: 0 3px;
+}
+
+.otp-form .input:first-child {
+    margin-left: 0;
+}
+
+.otp-form .input:last-child {
+    margin-right: 0;
+}
+
+.otp-form .input:focus {
+    border: 1px solid #E00570;
+    outline: none;
+}
+
+.otp-form .input:nth-child(1) {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+a {
+    color: #333;
+}
+
+.margin-8-top {
+    margin-top: 8px;
+}
+
+#otp {
+    direction: ltr !important;
+}
+
+.change-language-button {
+    background-color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 12px;
+    border: 1px solid #D9D9D9;
+}
+
+.password-show-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.border-right-gray {
+    border-left: 1px solid #D7DADF;
+    border-right: none;
+}
+
+/* Additional Qatar Charity styles */
+.QC_primary-btn {
+    background-color: #E00570;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.QC_primary-btn:hover {
+    background-color: #c2046b;
+}
+
+.QC_primary-color {
+    color: #E00570;
+}
+
+.red-color {
+    color: #E00570;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* Utility Classes */
+.padding-none {
+    padding: 0 !important;
+}
+
+.padding-less {
+    padding: 5px !important;
+}
+
+.padding-10-v {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.padding-10-h {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.padding-20-v {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.margin-0-bottom {
+    margin-bottom: 0 !important;
+}
+
+.margin-24-top {
+    margin-top: 24px !important;
+}
+
+.margin-30-bottom {
+    margin-bottom: 30px !important;
+}
+
+.margin-30-top {
+    margin-top: 30px !important;
+}
+
+.margin-40-bottom {
+    margin-bottom: 40px !important;
+}
+
+.margin-50-top {
+    margin-top: 50px !important;
+}
+
+.margin-20-top {
+    margin-top: 20px !important;
+}
+
+.font-24 {
+    font-size: 24px !important;
+}
+
+.font-14 {
+    font-size: 14px !important;
+}
+
+.font-12 {
+    font-size: 12px !important;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+.font-normal {
+    font-weight: normal !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.justify-content-end {
+    justify-content: flex-end !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.flex-column-reverse {
+    flex-direction: column-reverse !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.position-relative {
+    position: relative !important;
+}
+
+.position-absolute {
+    position: absolute !important;
+}
+
+.position-fixed {
+    position: fixed !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Media Queries */
+@media (max-width: 767.98px) {
+    .login,
+    .image {
+        min-height: 0px;
+    }
+
+    .margin-125-top-xs {
+        margin-top: 125px;
+    }
+
+    .min-height-calc-xs {
+        min-height: calc(100vh - 500px);
+    }
+    
+    .text-center-md {
+        text-align: center !important;
+    }
+    
+    .hidden-xs {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .hidden-sm {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hidden-md {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hidden-lg {
+        display: none !important;
+    }
+}
