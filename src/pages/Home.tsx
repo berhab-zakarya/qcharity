@@ -11,6 +11,8 @@ import PeopleReached from "../components/sections/PeopleReached";
 import WhatDrivesUs from "../components/sections/WhatDrivesUs";
 import OurPartners from "../components/sections/OurPartners";
 import { useEffect } from "react";
+import Header from "../components/sections/Header";
+import Footer from "../components/sections/Footer";
 
 export default function Home() {
   useEffect(() => {
@@ -19,7 +21,7 @@ export default function Home() {
   return (
     <div className="">
       {/* Header */}
-      {/* <Header /> */}
+      <Header />
 
       <main className="flex-1">
         <MainBanner />
@@ -36,7 +38,7 @@ export default function Home() {
         <NewsletterSubscription />
       </main>
 
-      {/* <Footer/> */}
+      <Footer/>
       {/* <Footer /> */}
     </div>
   );

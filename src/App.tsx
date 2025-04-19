@@ -6,7 +6,6 @@ import SocialWelfare from "./pages/Ourwork";
 import Contactus from "./pages/Contactus";
 import Faq from "./pages/Faq";
 import DonationBanner from "./components/Categories/categorie";
-import RootLayout from "./layouts/RootLayout";
 import QatarCharityNews from "./pages/News";
 import NewsArticle from "./pages/NewsArticle";
 import Relief from "./pages/Relief";
@@ -14,8 +13,7 @@ import Relief from "./pages/Relief";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<RootLayout />}>
-        <Route index element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="who-we-are" element={<WhoAreWe />} />
         <Route path="ourwork" element={<SocialWelfare />} />
@@ -25,7 +23,6 @@ function App() {
         <Route path="news" element={<QatarCharityNews />} />
         <Route path="news-article" element={<NewsArticle />} />
         <Route path="relief" element={<Relief />} />
-      </Route>
     </Routes>
   );
 }
