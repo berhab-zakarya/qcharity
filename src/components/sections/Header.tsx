@@ -82,7 +82,8 @@ const Header = () => {
                       style={{ height: '86px' }}
                       onClick={subForm}
                       type="button">
-               Login
+                        <a href="/login"> Login</a>
+              
               </button>
             </form>
           </li>
