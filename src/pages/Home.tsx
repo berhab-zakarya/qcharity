@@ -1,7 +1,6 @@
 
 import CurrentAppeals from "../components/sections/CurrentAppeals";
 import DevelopmentHumanitarianAid from "../components/sections/DevelopmentHumanitarianAid";
-import Footer from "../components/sections/Footer";
 import ImpactStatistics from "../components/sections/ImpactStatistics";
 import MainBanner from "../components/sections/MainBanner";
 import NewsletterSubscription from "../components/sections/NewsLetterSubscribe";
@@ -11,7 +10,6 @@ import OurOffices from "../components/sections/OurOffices";
 import PeopleReached from "../components/sections/PeopleReached";
 import WhatDrivesUs from "../components/sections/WhatDrivesUs";
 import OurPartners from "../components/sections/OurPartners";
-import Header from "../components/sections/Header";
 import { useEffect } from "react";
 
 export default function Home() {

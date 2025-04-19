@@ -2,7 +2,6 @@
 import { useState } from 'react';
 
 export default function OurOffices() {
-  const [activeTab, setActiveTab] = useState('helped-countries');
 
   return (
     <section className="our-locations pb-0">

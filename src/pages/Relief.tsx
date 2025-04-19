@@ -335,7 +335,7 @@ const Relief = () => {
         </div>
 
         <div className="container-fluid d-block d-md-none">
-          <div id="msd" className="" style={{visibility: "inherit !important", overflow: "hidden"}}>
+          <div id="msd" className="" style={{ overflow: "hidden"}}>
             <div data-pr="c" id="hdtb-sc" className="text-center">
               <div id="hdtb-msb" className="">
                 <div className="px-3 float-start mb-12">

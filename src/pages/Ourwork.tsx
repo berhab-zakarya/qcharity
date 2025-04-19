@@ -25,6 +25,7 @@ const SocialWelfare = () => {
     // In a real implementation, you'd use something like:
     // const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
     // const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el));
+    setDonationType("1")
   }, []);
 
   return (
@@ -92,11 +93,11 @@ const SocialWelfare = () => {
             <div className="modal-body">
               <div className="row col-12 mt-2 mb-7 justify-content-center gx-0">
                 <label className="col-5 col-md-3 rounded-pill-start rounded-0 btn btn-primary text-center" id="rbOneTimeDonationLabel">
-                  <input type="radio" name="rdoDonation1" value="1" checked={donationType === '1'} id="rbOneTimeDonation" hidden onChange={ChangeDDL} />
+                  <input type="radio" name="rdoDonation1" value="1" checked={donationType === '1'} id="rbOneTimeDonation" hidden onChange={()=>{}} />
                   One Time
                 </label>
                 <label className="col-5 col-md-3 rounded-pill-end rounded-0 btn btn-outline-primary text-center" id="rbMonthlyDonationLabel">
-                  <input type="radio" name="rdoDonation1" value="2" checked={donationType === '2'} id="rbMonthlyDonation" hidden onChange={ChangeDDL} />
+                  <input type="radio" name="rdoDonation1" value="2" checked={donationType === '2'} id="rbMonthlyDonation" hidden onChange={()=>{}} />
                   Monthly
                 </label>
               </div>
@@ -111,23 +112,23 @@ const SocialWelfare = () => {
                 <div className="row input-group justify-content-between">
                   <div className="col-1">
                     <button className="btn btn-outline-primary rounded-circle px-4 btnAmounts" 
-                      onClick={(e) => FastDonationAmountSelectSadaqa(50, '1', e.target)} type="button">50</button>
+                      onClick={()=>{}} type="button">50</button>
                   </div>
                   <div className="col-1">
                     <button className="btn btn-outline-primary rounded-circle px-3 btnAmounts" 
-                      onClick={(e) => FastDonationAmountSelectSadaqa(100, '1', e.target)} type="button">100</button>
+                      onClick={()=>{}} type="button">100</button>
                   </div>
                   <div className="col-1">
                     <button className="btn btn-outline-primary rounded-circle px-3 btnAmounts" 
-                      onClick={(e) => FastDonationAmountSelectSadaqa(300, '1', e.target)} type="button">300</button>
+                      onClick={()=>{}} type="button">300</button>
                   </div>
                   <div className="col-1">
                     <button className="btn btn-outline-primary rounded-circle px-3 btnAmounts" 
-                      onClick={(e) => FastDonationAmountSelectSadaqa(500, '1', e.target)} type="button">500</button>
+                      onClick={()=>{}} type="button">500</button>
                   </div>
                   <div className="col-1">
                     <button className="btn btn-outline-primary rounded-circle px-2 btnAmounts" 
-                      onClick={(e) => FastDonationAmountSelectSadaqa(1000, '1', e.target)} type="button">1000</button>
+                      onClick={()=>{}} type="button">1000</button>
                   </div>
                 </div>
               </div>
@@ -138,7 +139,6 @@ const SocialWelfare = () => {
                     <input className="col-12 form-control text-center rounded-pill" 
                       id="txtTotalAmountFastAccountSadaqaDon1" 
                       name="txtTotalAmountFastAccountSadaqa" 
-                      onKeyPress={(e) => OnlyNumeric(e, e.target, 5)} 
                       placeholder="Another Amount Q.R." 
                       value={donationAmount}
                       onChange={(e) => setDonationAmount(e.target.value)} />

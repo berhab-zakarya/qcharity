@@ -1,12 +1,6 @@
 import "../../qc.global.css"
 
 const Header = () => {
-  const toggleNotificationBar = () => {
-    const notification = document.getElementById('covidNotification');
-    if (notification) {
-      notification.style.display = notification.style.display === 'none' ? 'block' : 'none';
-    }
-  };
 
   const changeCurrency = (currencyId: string) => {
     console.log(`Currency changed to ID: ${currencyId}`);

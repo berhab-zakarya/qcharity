@@ -15,11 +15,9 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
-  const [otpInputs, setOtpInputs] = useState(['', '', '', '', '', '']);
-  const [timer, setTimer] = useState(0);
-  const [showEmailInput, setShowEmailInput] = useState(true);
-  const [showPasswordStep, setShowPasswordStep] = useState(false);
-  const [showVerificationStep, setShowVerificationStep] = useState(false);
+  // const [showEmailInput, setShowEmailInput] = useState(true);
+  // const [showPasswordStep, setShowPasswordStep] = useState(false);
+  // const [showVerificationStep, setShowVerificationStep] = useState(false);
 
   return (
     <div id="home-main-wrapper" className="pageForScroll">
@@ -76,7 +74,7 @@ const LoginPage = () => {
                   <div className="row" style={{ width: '100%' }}>
                     <div className="col-md-10 col-md-offset-1">
                       {/* Back button */}
-                      <a href="#" id="btn-back" className="col-xs-12 padding-none margin-50-top margin-40-bottom hidden" onClick={handleBack}>
+                      <a href="#" id="btn-back" className="col-xs-12 padding-none margin-50-top margin-40-bottom hidden" onClick={()=>{}}>
                         <p className="bold">
                           <i className="fa fa-chevron-left fa-dir-flip"></i>
                           Back
@@ -88,7 +86,7 @@ const LoginPage = () => {
                         <p id="sub-heading" className="margin-30-bottom font-14 margin-8-top">Welcome Back, please enter your login details</p>
                       </div>
 
-                      <form onSubmit={handleSubmit} className="col-xs-12 padding-none form-horizontal text-center" id="frm-login-user" method="post" role="form">
+                      <form onSubmit={()=>{}} className="col-xs-12 padding-none form-horizontal text-center" id="frm-login-user" method="post" role="form">
                         <div id="anti-forgery-token">
                           <input name="__RequestVerificationToken" type="hidden" value="IV0p3mUydPTU8XXq5WB_m1cwmYnqEIgauNRyqtK1J4RQnaFWGRuVc2lWRYpo5Hl8V9Z0rquH_PH9nnR-ayTdP5ZIDaCFfPKQO4v1Vmg8Tzw1" />
                         </div>
@@ -96,7 +94,7 @@ const LoginPage = () => {
                         <input id="IsMobileLogin" name="IsMobileLogin" type="hidden" value="" />
                         
                         {/* Email/Username Input */}
-                        <div id="email-input" className={`col-xs-12 padding-none form-group margin-0-bottom ${!showEmailInput ? 'hidden' : ''}`}>
+                        <div id="email-input" className={`col-xs-12 padding-none form-group margin-0-bottom ${!true ? 'hidden' : ''}`}>
                           <input 
                             className="form-control rounded-pill" 
                             id="UserName" 
@@ -110,7 +108,7 @@ const LoginPage = () => {
                         </div>
 
                         {/* Password and Remember Me Input */}
-                        <div id="password-step" className={`col-xs-12 padding-none margin-0-bottom form-group ${!showPasswordStep ? 'hidden' : ''}`}>
+                        <div id="password-step" className={`col-xs-12 padding-none margin-0-bottom form-group ${!false ? 'hidden' : ''}`}>
                           <div className="col-xs-12 padding-none">
                             <div className="position-relative">
                               <input 
@@ -148,9 +146,9 @@ const LoginPage = () => {
                       </form>
 
                       {/* OTP area */}
-                      <div id="verification-step" className={`col-xs-12 padding-none otp-form ${!showVerificationStep ? 'hidden' : ''}`}>
+                      <div id="verification-step" className={`col-xs-12 padding-none otp-form ${!true ? 'hidden' : ''}`}>
                         <div id="otp" className="inputs col-xs-12 padding-none d-flex justify-content-center">
-                          {otpInputs.map((value, index) => (
+                          {/* {otpInputs.map((value, index) => (
                             <input
                               key={index}
                               id={`otp-input-${index}`}
@@ -158,10 +156,10 @@ const LoginPage = () => {
                               type="text"
                               inputMode="numeric"
                               value={value}
-                              onChange={(e) => handleOtpInputChange(index, e.target.value)}
-                              onKeyDown={(e) => handleOtpKeyDown(index, e)}
+                              onChange={()=>{}}
+                              onKeyDown={()=>{}}
                             />
-                          ))}
+                          ))} */}
                         </div>
 
                         <div id="no-code-otp" className="col-xs-12 margin-30-top text-center">
@@ -172,13 +170,12 @@ const LoginPage = () => {
                               className="pull-right text-right padding-none red-color underline" 
                               style={{ border: '0px', backgroundColor: 'transparent', color: '#e00570 !important', marginRight: '15px' }} 
                               id="btn-ResendCode" 
-                              onClick={() => sendOTP(true)}
-                              disabled={timer > 0}
+                              onClick={()=>{}}
                             >
                               Resend new code
                             </button>
                             <span className="padding-10-h" id="timer" style={{ fontWeight: 'bold' }}>
-                              {timer > 0 ? `${timer}s` : ''}
+                              30s
                             </span>
                           </div>
                         </div>
@@ -197,25 +194,25 @@ const LoginPage = () => {
                       </div>
 
                       {/* Buttons for sign in and continue */}
-                      {showEmailInput && (
+                      {true && (
                         <button id="sign-in" type="submit" className="col-xs-12 QC_primary-btn btn-lg rounded-pill margin-24-top" >
                           <span>Log In</span>
                         </button>
                       )}
                       
-                      {showPasswordStep && (
+                      {true && (
                         <button id="sign-in" type="submit" className="col-xs-12 QC_primary-btn btn-lg rounded-pill margin-24-top" >
                           <span>Log In</span>
                         </button>
                       )}
                       
-                      {showVerificationStep && (
+                      {false && (
                         <button id="sign-in" type="submit" className="col-xs-12 QC_primary-btn btn-lg rounded-pill margin-24-top" >
                           <span>Verify</span>
                         </button>
                       )}
 
-                      {!showVerificationStep && !showPasswordStep && (
+                      {!false && !true && (
                         <button id="phone-verification" type="button" className="col-xs-12 QC_primary-btn btn-lg rounded-pill margin-24-top">
                           <span>Continue</span>
                         </button>

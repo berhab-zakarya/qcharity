@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from "react";
 
 const QatarCharityNews = () => {
   const [newsPage, setNewsPage] = useState(2);

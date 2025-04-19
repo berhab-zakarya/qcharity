@@ -1,7 +1,7 @@
 import { useState } from "react"; // You'll need to install bootstrap
 import React from "react";
 
-const DonationBanner: React.FC<DonationBannerProps> = () => {
+const DonationBanner = () => {
   const [donationType, setDonationType] = useState<"one-time" | "monthly">(
     "one-time"
   );
@@ -371,7 +371,7 @@ const DonationBanner: React.FC<DonationBannerProps> = () => {
         </div>
       </section>
 
-      <style jsx>{`
+      <style>{`
         .spotlight .pulits-hr {
           width: 100%;
         }
