@@ -1,4 +1,4 @@
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function LoginComponent() {
   const [userInput, setUserInput] = useState('');
@@ -21,7 +21,7 @@ export default function LoginComponent() {
         <div className="col-xs-12 hidden-md hidden-lg padding-none position-fixed d-md-none w-full " style={{ top: 0, zIndex: 99, background: 'white' }}>
           <div className="col-xs-12 d-flex padding-20-v align-items-center justify-content-around " style={{ borderBottom: '1px solid #D9D9D9' }}>
             <a href="/en/global/q" className="col-xs-6 padding-none">
-              <img className="col-xs-8 col-sm-6 padding-none w-2/3" src="/Content/images/QC-Logo-New.png" alt="QC Logo" />
+              <img className="col-xs-8 col-sm-6 padding-none w-2/3" src="/content/images/QC-Logo-New.png" alt="QC Logo" />
             </a>
             <div className="col-xs-6 col-sm-4 col-sm-offset-2 d-flex justify-content-end padding-none">
               <a href="/ar/qa/account/login" className="col-xs-6 padding-less change-language LoginMenuA">
@@ -76,7 +76,7 @@ export default function LoginComponent() {
                             <div className="position-relative">
                               <input className="form-control margin-0-bottom rounded-[12px] " id="inputPassword" name="LoginPassword" placeholder="Password" type="password" />
                               <div id="show" className="password-show-icon">
-                                <img src="/Content/images/newLoginImages/eyeIcon.png" className="mt-[6px]" alt="show/hide" />
+                                <img src="/content/images/newLoginImages/eyeIcon.png" className="mt-[6px]" alt="show/hide" />
                               </div>
                             </div>
                           </div>
@@ -94,7 +94,7 @@ export default function LoginComponent() {
                       <div id="verification-step" className="col-xs-12 padding-none hidden otp-form">
                         <div id="otp" className="inputs col-xs-12 padding-none d-flex justify-content-center">
                           {[...Array(6)].map((_, i) => (
-                            <input key={i} className="input" type="text" inputMode="numeric" />
+                            <input key={i} className="input" type="text" inputMode="numeric" maxLength="1" />
                           ))}
                         </div>
                         <div id="no-code-otp" className="col-xs-12 margin-30-top text-center">
@@ -149,7 +149,7 @@ export default function LoginComponent() {
             <div className="col-md-7 backgroud_overlay hidden-xs hidden-sm position-relative">
               <div className="col-xs-12 d-flex margin-50-top align-items-center justify-content-between">
                 <a href="/en/global/q" className="col-xs-6">
-                  <img src="/Content/images/QC-Logo-New.png" alt="QC Logo" />
+                  <img src="/content/images/QC-Logo-New.png" alt="QC Logo" />
                 </a>
                 <div className="col-xs-6 d-flex justify-content-end">
                   <a href="/ar/qa/account/login" className="change-language LoginMenuA change-language-button">

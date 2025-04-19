@@ -53,46 +53,22 @@ const Header = () => {
           <li className="nav-item h-100 bg-light d-none d-xl-block" style={{ width: '1px' }}></li>
           
           <li className="nav-item d-none d-xl-block">
-            <a className="nav-link" href="/zakat">Zakat Calculator</a>
+            <a className="nav-link" href="/">Home</a>
           </li>
           
           <li className="nav-item h-100 bg-light d-none d-md-block" style={{ width: '1px' }}></li>
           
           {/* Currency Dropdown */}
           <li className="nav-item dropdown d-none d-md-block">
-            <a className="nav-link dropdown-toggle text-uppercase" href="#"
-              id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown">
-              <span>USD</span>
+            <a className="nav-link dropdown-toggle text-uppercase" href="/reach-us"  >
+              Contact Us 
             </a>
-            <div className="dropdown-menu w-100">
-              <div className="container-fluid">
-                <div className="row">
-                  <div className="col-12 col-lg-11 offset-lg-1">
-                    <div className="row h-100 d-flex flex-row">
-                      <div className="col-4 align-self-center">
-                        <h1 className="fw-normal" style={{ fontSize: '36px' }}>Select</h1>
-                        <h1 className="display-4 fw-bolder">Currency</h1>
-                      </div>
-                      <ul className="col-3 list-group">
-                        {['QAR', 'USD', 'EUR'].map(currency => (
-                          <li key={currency} className="list-group-item">
-                            <a className="dropdown-item" href="#" onClick={() => changeCurrency(currency)}>
-                              {currency}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </li>
 
           {/* Login Links */}
           <li className="nav-item h-100 bg-light d-none d-md-block" style={{ width: '1px' }}></li>
           <li className="nav-item d-none d-md-flex">
-            <a className="nav-link px-3" href="/login">Login</a>
+            <a className="nav-link px-3" href="/who-we-are">About Us</a>
           </li>
           <li className="profilemenumobile nav-item d-block d-md-none ml-4">
             <a href="/login">Login</a>
@@ -108,7 +84,7 @@ const Header = () => {
                       style={{ height: '86px' }}
                       onClick={subForm}
                       type="button">
-                Donate Now
+               Login
               </button>
             </form>
           </li>

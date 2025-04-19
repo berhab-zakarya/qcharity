@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Footer from "../components/sections/Footer";
+import Header from "../components/sections/Header";
 
 const QatarCharityNews = () => {
   const [newsPage, setNewsPage] = useState(2);
@@ -16,6 +18,10 @@ const QatarCharityNews = () => {
   };
 
   return (
+
+    <>
+    <Header />
+
     <section className="pt-13 pt-lg-16 pt-xl-17">
       <div className="container-fluid container-lg">
         <div className="newsinternationalheader">
@@ -469,6 +475,9 @@ const QatarCharityNews = () => {
         )}
       </div>
     </section>
+
+    <Footer />
+    </>
   );
 };
 

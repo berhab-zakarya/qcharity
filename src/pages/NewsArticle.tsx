@@ -1,7 +1,11 @@
+import Footer from "../components/sections/Footer";
+import Header from "../components/sections/Header";
 
 const NewsArticle = () => {
   return (
     <>
+
+    <Header/>
       <section className="pt-lg-17 pt-md-15 pt-13">
         <div className="container-fluid container-lg">
           <div className="row">
@@ -125,6 +129,7 @@ const NewsArticle = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

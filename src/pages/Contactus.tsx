@@ -1,6 +1,7 @@
 import React, { useState, FormEvent } from 'react';
 import Header from '../components/sections/Header';
 import Footer from '../components/sections/Footer';
+import BranchOffices from '../components/sections/BranchOffices';
 
 interface ContactFormData {
   personName: string;
@@ -77,14 +78,14 @@ const Contactus: React.FC = () => {
               <div className="col-12 col-md-6">
                 <div className="mt-8 fw-bold">
                   <img 
-                    src="/Content/QCGlobal/images/location-icon.png"
+                    src="/content/QCGlobal/images/location-icon.png"
                     alt="Location icon"
                   />
                   <span className="ms-6 fw-bold">PO.BOX 1224 Doha, Qatar</span>
                 </div>
                 <div className="mt-5">
                   <img 
-                    src="/Content/QCGlobal/images/phone-icon.png"
+                    src="/content/QCGlobal/images/phone-icon.png"
                     alt="Phone icon"
                   />
                   <span className="ms-6 fw-bold">
@@ -110,6 +111,7 @@ const Contactus: React.FC = () => {
         </div>
         <hr className="mt-10" />
       </div>
+      <BranchOffices />
 
       {/* Contact Form Section */}
       <section className="pt-xl-16 pt-md-14 pt-12">
