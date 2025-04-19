@@ -11,33 +11,7 @@ const SocialWelfare = () => {
   const [donationType, setDonationType] = useState('1'); // 1 for One Time, 2 for Monthly
   const [donationAmount, setDonationAmount] = useState('');
 
-  const ChangeDDL = () => {
-    const oneTime = document.getElementById('rbOneTimeDonation');
-    setDonationType(oneTime.checked ? '1' : '2');
-  };
 
-  const FastDonationAmountSelectSadaqa = (amount, type, button) => {
-    // Reset all buttons to outline style
-    const buttons = document.querySelectorAll('.btnAmounts');
-    buttons.forEach(btn => {
-      btn.className = btn.className.replace('btn-primary', 'btn-outline-primary');
-    });
-    
-    // Set this button to primary style
-    button.className = button.className.replace('btn-outline-primary', 'btn-primary');
-    
-    // Set amount
-    setDonationAmount(amount);
-    document.getElementById('txtTotalAmountFastAccountSadaqaDon1').value = amount;
-  };
-
-  const OnlyNumeric = (event, element, maxLength) => {
-    const keyCode = event.which ? event.which : event.keyCode;
-    if (keyCode > 31 && (keyCode < 48 || keyCode > 57)) {
-      return false;
-    }
-    return true;
-  };
 
   const DonateNowMainAccountDetails = () => {
     // Implementation of donation logic would go here
@@ -108,7 +82,7 @@ const SocialWelfare = () => {
       </div>
 
       {/* Modal */}
-      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal fade" id="exampleModal"  aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
           <div className="modal-content">
             <div className="modal-header">

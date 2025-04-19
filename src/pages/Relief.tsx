@@ -1,29 +1,6 @@
-import React, { useEffect } from 'react';
 
 const Relief = () => {
-  useEffect(() => {
-    // Carousel functionality
-    const handleCarousel = () => {
-      const multiCarousel = document.querySelector('.MultiCarousel');
-      if (!multiCarousel) return;
-      
-      const itemsWidth = multiCarousel.querySelectorAll('.item').length * 300;
-      const innerWidth = multiCarousel.querySelector('.MultiCarousel-inner').offsetWidth;
-      
-      document.querySelector('.leftLst').addEventListener('click', () => {
-        const leftPos = document.querySelector('.MultiCarousel-inner').scrollLeft;
-        document.querySelector('.MultiCarousel-inner').scrollLeft = leftPos - 300;
-      });
-      
-      document.querySelector('.rightLst').addEventListener('click', () => {
-        const leftPos = document.querySelector('.MultiCarousel-inner').scrollLeft;
-        document.querySelector('.MultiCarousel-inner').scrollLeft = leftPos + 300;
-      });
-    };
-
-    // Initialize carousel after component mounts
-    setTimeout(handleCarousel, 500);
-  }, []);
+  
 
   return (
     <>

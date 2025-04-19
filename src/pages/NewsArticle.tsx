@@ -1,4 +1,3 @@
-import React from 'react';
 
 const NewsArticle = () => {
   return (
@@ -81,13 +80,13 @@ const NewsArticle = () => {
 
       <section>
         <div className="container-fluid bg-lighter">
-          <div className="container py-10 py-md-11 py-xl-12" action="https://qcharity.us10.list-manage.com/subscribe/post?u=6ffba0bc74a02f07db1b3d82e&amp;id=5b685f2f93" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+          <div className="container py-10 py-md-11 py-xl-12" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
             <form className="row gx-6 gx-xl-9 align-items-start align-items-xl-end" id="mc_embed_signup_scroll">
               <div className="col-12 col-sm-5 col-lg-4 offset-lg-1 col-xl-3 offset-xl-0 mb-6">
                 <h2>
                   Subscribe Now
                 </h2>
-                <p className="mb-0" htmlFor="mce-EMAIL">
+                <p className="mb-0" >
                   Subscribe to receive Qatar Charity Newsletter
                 </p>
               </div>

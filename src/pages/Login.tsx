@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import '../styles/LoginPage.css';
 
 
@@ -21,72 +20,6 @@ const LoginPage = () => {
   const [showEmailInput, setShowEmailInput] = useState(true);
   const [showPasswordStep, setShowPasswordStep] = useState(false);
   const [showVerificationStep, setShowVerificationStep] = useState(false);
-
-  const navigate = useNavigate();
-
-  // Handle OTP input focus
-  const handleOtpInputChange = (index, value) => {
-    if (value && /^\d$/.test(value)) {
-      const newOtpInputs = [...otpInputs];
-      newOtpInputs[index] = value;
-      setOtpInputs(newOtpInputs);
-
-      // Auto focus next input
-      if (index < 5 && value) {
-        document.getElementById(`otp-input-${index + 1}`).focus();
-      }
-    }
-  };
-
-  // Handle backspace in OTP input
-  const handleOtpKeyDown = (index, e) => {
-    if (e.key === 'Backspace' && !otpInputs[index] && index > 0) {
-      document.getElementById(`otp-input-${index - 1}`).focus();
-    }
-  };
-
-  // Continue to password step
-  const onClickContinue = () => {
-    setShowEmailInput(false);
-    setShowPasswordStep(true);
-    document.getElementById('btn-back').classList.remove('hidden');
-  };
-
-  // Send OTP function
-  const sendOTP = (isResend = false) => {
-    setShowEmailInput(false);
-    setShowPasswordStep(false);
-    setShowVerificationStep(true);
-    document.getElementById('btn-back').classList.remove('hidden');
-    
-    // Set timer for 60 seconds
-    setTimer(60);
-    const countdown = setInterval(() => {
-      setTimer(prevTimer => {
-        if (prevTimer <= 1) {
-          clearInterval(countdown);
-          return 0;
-        }
-        return prevTimer - 1;
-      });
-    }, 1000);
-  };
-
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you would typically make an API call to login
-    // For now, we'll just go to the password step
-    onClickContinue();
-  };
-
-  // Handle back button
-  const handleBack = () => {
-    setShowEmailInput(true);
-    setShowPasswordStep(false);
-    setShowVerificationStep(false);
-    document.getElementById('btn-back').classList.add('hidden');
-  };
 
   return (
     <div id="home-main-wrapper" className="pageForScroll">
@@ -224,7 +157,6 @@ const LoginPage = () => {
                               className="input"
                               type="text"
                               inputMode="numeric"
-                              maxLength="1"
                               value={value}
                               onChange={(e) => handleOtpInputChange(index, e.target.value)}
                               onKeyDown={(e) => handleOtpKeyDown(index, e)}
@@ -266,25 +198,25 @@ const LoginPage = () => {
 
                       {/* Buttons for sign in and continue */}
                       {showEmailInput && (
-                        <button id="sign-in" type="submit" className="col-xs-12 QC_primary-btn btn-lg rounded-pill margin-24-top" onClick={handleSubmit}>
+                        <button id="sign-in" type="submit" className="col-xs-12 QC_primary-btn btn-lg rounded-pill margin-24-top" >
                           <span>Log In</span>
                         </button>
                       )}
                       
                       {showPasswordStep && (
-                        <button id="sign-in" type="submit" className="col-xs-12 QC_primary-btn btn-lg rounded-pill margin-24-top" onClick={handleSubmit}>
+                        <button id="sign-in" type="submit" className="col-xs-12 QC_primary-btn btn-lg rounded-pill margin-24-top" >
                           <span>Log In</span>
                         </button>
                       )}
                       
                       {showVerificationStep && (
-                        <button id="sign-in" type="submit" className="col-xs-12 QC_primary-btn btn-lg rounded-pill margin-24-top" onClick={handleSubmit}>
+                        <button id="sign-in" type="submit" className="col-xs-12 QC_primary-btn btn-lg rounded-pill margin-24-top" >
                           <span>Verify</span>
                         </button>
                       )}
 
                       {!showVerificationStep && !showPasswordStep && (
-                        <button id="phone-verification" type="button" className="col-xs-12 QC_primary-btn btn-lg rounded-pill margin-24-top" onClick={sendOTP}>
+                        <button id="phone-verification" type="button" className="col-xs-12 QC_primary-btn btn-lg rounded-pill margin-24-top">
                           <span>Continue</span>
                         </button>
                       )}
