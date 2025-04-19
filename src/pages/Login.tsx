@@ -96,7 +96,7 @@ export default function LoginComponent() {
                       <div id="verification-step" className="col-xs-12 padding-none hidden otp-form">
                         <div id="otp" className="inputs col-xs-12 padding-none d-flex justify-content-center">
                           {[...Array(6)].map((_, i) => (
-                            <input key={i} className="input" type="text" inputMode="numeric" maxLength="1" />
+                            <input key={i} className="input" type="text" inputMode="numeric"  />
                           ))}
                         </div>
                         <div id="no-code-otp" className="col-xs-12 margin-30-top text-center">

@@ -2,9 +2,7 @@ import "../../qc.global.css"
 
 const Header = () => {
 
-  const changeCurrency = (currencyId: string) => {
-    console.log(`Currency changed to ID: ${currencyId}`);
-  };
+
 
   const subForm = () => {
     console.log('Donate Now clicked');

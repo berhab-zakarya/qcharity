@@ -83,6 +83,15 @@ hr {
   opacity: 0.8;
 }
 
+.w_full{
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .w_full{
+     padding: 25%;
+  }
+}
+
 hr:not([size]) {
   height: 1.3px;
 }
