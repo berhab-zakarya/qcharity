@@ -15,16 +15,16 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<RootLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/who-we-are" element={<WhoAreWe />} />
-        <Route path="/ourwork" element={<SocialWelfare />} />
-        <Route path="/reach-us" element={<Contactus />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/donate" element={<DonationBanner />} />
-        <Route path="/news" element={<QatarCharityNews />} />
-        <Route path="/news-article" element={<NewsArticle />} />
-        <Route path="/relief" element={<Relief />} />
+        <Route index element={<Home />} />
+        <Route path="login" element={<LoginPage />} />
+        <Route path="who-we-are" element={<WhoAreWe />} />
+        <Route path="ourwork" element={<SocialWelfare />} />
+        <Route path="reach-us" element={<Contactus />} />
+        <Route path="faq" element={<Faq />} />
+        <Route path="donate" element={<DonationBanner />} />
+        <Route path="news" element={<QatarCharityNews />} />
+        <Route path="news-article" element={<NewsArticle />} />
+        <Route path="relief" element={<Relief />} />
       </Route>
     </Routes>
   );
