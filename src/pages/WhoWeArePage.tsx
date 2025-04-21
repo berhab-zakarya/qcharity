@@ -1,6 +1,5 @@
 import Footer from "../components/sections/Footer";
 import Header from "../components/sections/Header";
-import NewsletterSubscription from "../components/sections/NewsLetterSubscribe";
 
 import { useEffect } from "react";
 const WhoWeAre = () => {
@@ -81,7 +80,7 @@ const WhoWeAre = () => {
             </div>
           </div>
           <div className="col-4 mt-5" style={{ width: "200px" }}>
-            <div className="xs-font">&#169; Photograph is Copyright Qatar Charity</div>
+         
             <hr />
           </div>
 
@@ -117,7 +116,7 @@ const WhoWeAre = () => {
               <div className="">
                 <img className="col-md-8 z-index-1 ms-2 col-10 col-sm-5 field-card-image" src="/content/QCGlobal/images/Where-1.jpg" />
                 <div className="mt-5 ms-2 text-start ms-15 ms-md-0" style={{ width: "200px" }}>
-                  <div className="xs-font">&#169; Photograph is Copyright Qatar Charity</div>
+               
                 </div>
               </div>
 
@@ -130,7 +129,7 @@ const WhoWeAre = () => {
           <div className="col-12 col-sm-10 mt-10 d-md-none">
             <img className="col-12" src="/content/QCGlobal/images/wh3.png" />
             <div className="text-start offset-2 ps-3 ps-sm-5" style={{ width: "200px" }}>
-              <div className="xs-font">&#169; Photograph is Copyright Qatar Charity</div>
+           
             </div>
           </div>
         </div>
@@ -297,7 +296,7 @@ const WhoWeAre = () => {
                 <img className="col-12 d-none d-lg-block" src="/content/QCGlobal/images/Wher2.jpg" />
                 <img className="col-12 d-lg-none" src="/content/QCGlobal/images/Wher3.jpg.jpg" />
                 <div className="col-12 col-md-5 mt-5 float-end text-end">
-                  <div className="xs-font">&#169; Photograph is Copyright Qatar Charity</div>
+               
                   <hr />
                 </div>
               </div>
@@ -341,7 +340,7 @@ const WhoWeAre = () => {
                 <img className="col-12 vision-mobile-image" src="/content/QCGlobal/images/vision-pic.png" />
                 <div className="w-100 d-block d-md-none"></div>
                 <div className="col-12 mt-5 col-sm-5 offset-sm-4 text-end">
-                  <div className="xs-font">&#169; Photograph is Copyright Qatar Charity</div>
+               
                   <hr />
                 </div>
               </div>
@@ -394,7 +393,7 @@ const WhoWeAre = () => {
           </div>
         </div>
       </section>
-      <NewsletterSubscription/>
+   
       <Footer/>
     </>
   );

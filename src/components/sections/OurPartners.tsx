@@ -1,9 +1,18 @@
 "use client"
 
 import { useState } from "react";
+import { Modal, Form, Button } from 'react-bootstrap';
 
 const OurPartners = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+  const [formData, setFormData] = useState({
+    organizationName: '',
+    email: '',
+    phone: '',
+    country: '',
+    description: ''
+  });
 
   const partnersList1 = [
     { name: 'idmc', url: 'idmc.jpg' },
@@ -32,6 +41,13 @@ const OurPartners = () => {
 
   const handleSlideChange = (index:any) => {
     setActiveSlide(index);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log(formData);
+    setShowModal(false);
   };
 
   return (
@@ -135,6 +151,124 @@ const OurPartners = () => {
             </div>
           </div>
         </div>
+        
+        <div className="row mt-5">
+          <div className="col-12 text-center">
+            <button 
+              className="btn btn-primary btn-lg rounded-pill px-4 py-2 shadow-sm"
+              onClick={() => setShowModal(true)}
+              style={{
+                background: 'linear-gradient(to right, #8E44AD, #C0392B)',
+                border: 'none',
+                transition: 'transform 0.2s ease'
+              }}
+            >
+              Cooperate with Us
+            </button>
+          </div>
+        </div>
+
+        {/* Cooperation Modal */}
+        <Modal 
+          show={showModal} 
+          onHide={() => setShowModal(false)}
+          size="lg"
+          centered
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Partnership Application</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form onSubmit={handleSubmit}>
+              <Form.Group className="mb-3">
+                <Form.Label>Organization Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter your organization name"
+                  value={formData.organizationName}
+                  onChange={(e) => setFormData({
+                    ...formData,
+                    organizationName: e.target.value
+                  })}
+                  required
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3">
+                <Form.Label>Email</Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="Enter your email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({
+                    ...formData,
+                    email: e.target.value
+                  })}
+                  required
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3">
+                <Form.Label>Phone Number</Form.Label>
+                <Form.Control
+                  type="tel"
+                  placeholder="Enter your phone number"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({
+                    ...formData,
+                    phone: e.target.value
+                  })}
+                  required
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3">
+                <Form.Label>Country</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter your country"
+                  value={formData.country}
+                  onChange={(e) => setFormData({
+                    ...formData,
+                    country: e.target.value
+                  })}
+                  required
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-4">
+                <Form.Label>Tell us about your organization</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={4}
+                  placeholder="Describe your organization and partnership goals"
+                  value={formData.description}
+                  onChange={(e) => setFormData({
+                    ...formData,
+                    description: e.target.value
+                  })}
+                  required
+                />
+              </Form.Group>
+
+              <div className="d-flex justify-content-end gap-2">
+                <Button variant="secondary" onClick={() => setShowModal(false)}>
+                  Cancel
+                </Button>
+                <Button 
+                  type="submit"
+                  variant="primary"
+                  style={{
+                    background: 'linear-gradient(to right, #3498DB, #2980B9)',
+                    border: 'none'
+                  }}
+                >
+                  Submit Application
+                </Button>
+              </div>
+            </Form>
+          </Modal.Body>
+        </Modal>
       </div>
     </section>
   );

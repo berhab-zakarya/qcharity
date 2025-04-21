@@ -37,7 +37,7 @@ const MainBanner: React.FC = () => {
           <div className="col-12 align-self-end">
             <div className="row justify-content-between">
               <div className="col gx-10 gx-sm-9">
-                <a href="/en/global/who-are-we" className="text-white text-uppercase text-decoration-none flex items-center float-start">
+                <a href="/who-we-are" className="text-white text-uppercase text-decoration-none flex items-center float-start">
                   Who we are
                   <svg xmlns="http://www.w3.org/2000/svg" width="13.717" height="13.717" viewBox="0 0 13.717 13.717" className="ms-3">
                     <path

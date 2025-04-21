@@ -1,5 +1,6 @@
 import { useState } from "react"; // You'll need to install bootstrap
 import React from "react";
+import Footer from "../sections/Footer";
 
 const DonationBanner = () => {
   const [donationType, setDonationType] = useState<"one-time" | "monthly">(
@@ -323,6 +324,82 @@ const DonationBanner = () => {
         </div>
       </section>
 
+
+    
+<section className="case-studies py-15">
+  <div className="container">
+    <div className="row g-4 row-cols-1 row-cols-md-2 row-cols-xl-5">
+      {[
+        {
+          image: "/content/QCGlobal/images/cases/case1.jpg",
+          title: "Urgent Medical Aid",
+          description: "Supporting critical healthcare needs for families in crisis",
+          link: "/cases/medical-aid"
+        },
+        {
+          image: "/content/QCGlobal/images/cases/case2.jpg",
+          title: "Food Security",
+          description: "Providing essential nutrition to vulnerable communities",
+          link: "/cases/food-security"
+        },
+        {
+          image: "/content/QCGlobal/images/cases/case3.jpg",
+          title: "Education Support",
+          description: "Enabling access to quality education for children",
+          link: "/cases/education"
+        },
+        {
+          image: "/content/QCGlobal/images/cases/case4.jpg",
+          title: "Shelter Assistance",
+          description: "Building safe homes for displaced families",
+          link: "/cases/shelter"
+        },
+        {
+          image: "/content/QCGlobal/images/cases/case5.jpg",
+          title: "Water Projects",
+          description: "Delivering clean water to communities in need",
+          link: "/cases/water"
+        }
+      ].map((item, index) => (
+        <div className="col" key={index}>
+          <div className="case-card h-100 rounded-3 overflow-hidden">
+            <div className="case-image position-relative">
+              <img 
+                src={item.image} 
+                alt={item.title}
+                className="w-100 h-100 object-cover"
+                style={{ height: "200px" }}
+              />
+            </div>
+            <div className="case-content p-4 bg-white">
+              <h5 className="fw-bold mb-2">{item.title}</h5>
+              <p className="text-gray mb-4 small">{item.description}</p>
+              <a 
+                href={item.link}
+                className="btn btn-link text-primary p-0 d-flex align-items-center"
+              >
+                Learn More
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="24" 
+                  height="24" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  className="ms-2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
       <section id="WSP">
         <div className="container">
           <div className="row">
@@ -443,6 +520,8 @@ const DonationBanner = () => {
           </div>
         </div>
       </section>
+
+      <Footer/>
     </>
   );
 };

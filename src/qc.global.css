@@ -13,6 +13,7 @@ $navbar-height: $navbar-height;*/
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #070707;
@@ -59,6 +60,13 @@ $navbar-height: $navbar-height;*/
   }
 }
 
+
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+
 body {
   margin: 0;
   font-family: "Fira Sans", sans-serif;
@@ -91,6 +99,301 @@ hr {
      padding: 25%;
   }
 }
+
+.nav-arrow {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.nav-arrow:hover {
+  opacity: 1;
+}
+
+/* تأكد من ظهور الأزرار على جميع الشاشات */
+@media (max-width: 768px) {
+  .nav-arrow {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  
+  .nav-arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+.events-section {
+  overflow: hidden;
+}
+
+.events-section .btn {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.events-section .btn:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .row.vh-100 {
+    height: auto !important;
+  }
+  .col-6 {
+    width: 100%;
+  }
+  .col-6:first-child {
+    height: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .events-section .btn {
+    display: none;
+  }
+}
+
+
+.news-image {
+  transition: transform 0.3s ease;
+}
+
+.text-gray {
+  color: #6c757d;
+}
+
+.f-ptSerif {
+  font-family: 'PT Serif', serif;
+}
+
+.btn-primary {
+  background-color: #004c84;
+  border-color: #004c84;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #003b67;
+  border-color: #003b67;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,76,132,0.15);
+}
+
+@media (max-width: 991.98px) {
+  .news-image {
+    height: 50vh !important;
+    min-height: 400px !important;
+    position: relative !important;
+  }
+}
+
+.news-image:hover {
+  transform: scale(1.02);
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+
+.line-clamp-3 {
+  -webkit-line-clamp: 3;
+}
+
+
+
+.case-card {
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+alae_container
+.case-card:hover {
+  transform: translateY(-5px);
+}
+
+.case-image img {
+  transition: transform 0.3s ease;
+}
+
+.case-card:hover .case-image img {
+  transform: scale(1.05);
+}
+
+.btn-link {
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.btn-link:hover svg {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+
+.scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  padding-bottom: 1rem;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* For horizontal scroll on mobile only */
+
+
+
+
+
+
+.transition-transform {
+  transition: transform 0.3s ease;
+}
+
+.btn-link:hover .transition-transform {
+  transform: translateX(5px);
+}
+
+/* Responsive column widths */
+@media (min-width: 768px) {
+  .scroll-container .row {
+    flex-wrap: wrap;
+  }
+}.scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  padding-bottom: 1rem;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+
+.title-underline {
+  height: 4px;
+  width: 80px;
+  background: #004c84;
+  margin-bottom: 1rem;
+}
+
+.display-4 {
+  color: #1a1a1a;
+  font-family: 'PT Serif', serif;
+  letter-spacing: -0.02em;
+}
+
+
+
+
+
+
+.horizontal-scroll-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.lead {
+  color: #6c757d;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* For horizontal scroll on mobile only */
+@media (max-width: 767px) {
+  .scroll-container .row {
+    flex-wrap: nowrap !important;
+    margin-right: -1rem;
+  }
+  
+  .case-card {
+    min-width: 280px;
+  }
+}
+
+.case-card {
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.case-card:hover {
+  transform: translateY(-5px);
+}
+
+.transition-transform {
+  transition: transform 0.3s ease;
+}
+
+.btn-link:hover .transition-transform {
+  transform: translateX(5px);
+}
+
+/* Responsive column widths */
+@media (min-width: 768px) {
+  .scroll-container .row {
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+  display: inline-block;
+  vertical-align: top;
+  width: [your-desired-width];
+  margin-right: [space-between-cards];
+}
+
+
+
+
+
+
+.text-primary {
+  color: #004c84 !important;
+}
+
+
+
 
 hr:not([size]) {
   height: 1.3px;
@@ -9359,6 +9662,52 @@ textarea.form-control-lg {
 
 .fw-bolder {
   font-weight: bolder !important;
+}
+
+
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.text-gray-700 {
+  color: #4a4a4a;
+}
+
+/* Add to your CSS file */
+.horizontal-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.btn-light {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: #fff;
+  transform: scale(1.05);
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.modal-content {
+  border-radius: 1rem;
+}
+
+.form-control:focus {
+  border-color: #3498DB;
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.bg-opacity-10 {
+  --bs-bg-opacity: 0.1;
 }
 
 .text-lowercase {

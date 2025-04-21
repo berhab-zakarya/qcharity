@@ -1,0 +1,14 @@
+.custom-scrollbar {
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;     /* Firefox */
+  }
+  
+.custom-scrollbar::-webkit-scrollbar {
+    display: none !important;            /* Chrome, Safari and Opera */
+    width: 0 !important;
+    height: 0 !important;
+  }
+.horizontal-scroll-container {
+  margin: -20px;  /* Compensate for padding */
+  padding: 20px;  /* Add padding to preserve spacing */
+}

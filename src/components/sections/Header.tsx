@@ -43,7 +43,7 @@ const Header = () => {
         {/* Brand Logo */}
         <div className="h-100 bg-light" style={{ width: '1px' }}></div>
         <a className="navbar-brand py-6 mb-0 h1 bg-white ms-0 ms-md-7" href="/">
-          <img src="/logo.svg" alt="" loading="lazy" className="mx-auto" />
+          <img src="/logo.png" alt="" loading="lazy" className="mx-auto" />
         </a>
 
         {/* Navigation Items */}

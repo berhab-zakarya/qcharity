@@ -1,10 +1,8 @@
 
-import CurrentAppeals from "../components/sections/CurrentAppeals";
-import DevelopmentHumanitarianAid from "../components/sections/DevelopmentHumanitarianAid";
+
 import ImpactStatistics from "../components/sections/ImpactStatistics";
 import MainBanner from "../components/sections/MainBanner";
-import NewsletterSubscription from "../components/sections/NewsLetterSubscribe";
-import NewsSection from "../components/sections/NewsSection";
+
 import OurAreasOfIntervention from "../components/sections/OurAreasOfIntervention";
 import OurOffices from "../components/sections/OurOffices";
 import PeopleReached from "../components/sections/PeopleReached";
@@ -13,6 +11,8 @@ import OurPartners from "../components/sections/OurPartners";
 import { useEffect } from "react";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
+import CardComponent from "../components/News/CardComponent";
+import EventsComponent from "../components/events/eventsComponet";
 
 export default function Home() {
   useEffect(() => {
@@ -26,16 +26,19 @@ export default function Home() {
       <main className="flex-1">
         <MainBanner />
         <WhatDrivesUs />
-
+        <CardComponent />
+        
         <OurAreasOfIntervention />
+        <EventsComponent/>
         <ImpactStatistics />
         <PeopleReached />
-        <DevelopmentHumanitarianAid />
+       
         <OurPartners />
-        <CurrentAppeals />
-        <NewsSection />
+  
         <OurOffices />
-        <NewsletterSubscription />
+
+    
+   
       </main>
 
       <Footer/>
