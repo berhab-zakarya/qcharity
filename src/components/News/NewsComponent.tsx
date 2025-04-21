@@ -1,10 +1,18 @@
-
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const NewsComponent = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { imageUrl, title, description, date, location: eventLocation } = location.state;
+
+  // Add state for donation
+  const [donationType, setDonationType] = useState("1");
+  const [donationAmount, setDonationAmount] = useState("");
+
+  const handleDonation = () => {
+    alert("Donation process initiated with amount: " + donationAmount);
+  };
 
   return (
     <>
@@ -78,9 +86,99 @@ const NewsComponent = () => {
               </div>
 
               {/* Share button with improved styling */}
-              <button className="btn btn-primary rounded-pill mt-5 px-4 py-2 d-inline-flex align-items-center gap-2 shadow-sm hover-lift">
+              <button 
+                className="btn btn-primary rounded-pill mt-5 px-4 py-2 d-inline-flex align-items-center gap-2 shadow-sm hover-lift"
+                data-bs-toggle="modal"
+                data-bs-target="#donationModal"
+              >
                 <span>Donate</span>
                 <i className="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Add Donation Modal */}
+      <div className="modal fade" id="donationModal" aria-labelledby="donationModalLabel" aria-hidden="true">
+        <div className="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="donationModalLabel">
+                Donate now to help
+              </h5>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div className="modal-body">
+              <div className="row col-12 mt-2 mb-7 justify-content-center gx-0">
+                <label className="col-5 col-md-3 rounded-pill-start rounded-0 btn btn-primary text-center">
+                  <input
+                    type="radio"
+                    name="rdoDonation"
+                    value="1"
+                    checked={donationType === "1"}
+                    onChange={(e) => setDonationType(e.target.value)}
+                    hidden
+                  />
+                  One Time
+                </label>
+                <label className="col-5 col-md-3 rounded-pill-end rounded-0 btn btn-outline-primary text-center">
+                  <input
+                    type="radio"
+                    name="rdoDonation"
+                    value="2"
+                    checked={donationType === "2"}
+                    onChange={(e) => setDonationType(e.target.value)}
+                    hidden
+                  />
+                  Monthly
+                </label>
+              </div>
+
+              <div className="text-center">
+                <p className="fw-medium text-uppercase">Set donation amount</p>
+              </div>
+
+              <div className="col-11 col-md-9 offset-md-1">
+                <div className="row input-group justify-content-between">
+                  {[50, 100, 300, 500, 1000].map((amount) => (
+                    <div className="col-1" key={amount}>
+                      <button
+                        className="btn btn-outline-primary rounded-circle px-2 btnAmounts"
+                        onClick={() => setDonationAmount(amount.toString())}
+                        type="button"
+                      >
+                        {amount}
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="col-12 mt-7">
+                <input
+                  className="col-12 form-control text-center rounded-pill"
+                  placeholder="Another Amount Q.R."
+                  value={donationAmount}
+                  onChange={(e) => setDonationAmount(e.target.value)}
+                />
+              </div>
+            </div>
+
+            <div className="modal-footer justify-content-between mt-md-15">
+              <button
+                type="button"
+                onClick={handleDonation}
+                className="btn btn-primary"
+              >
+                Donate now
+              </button>
+              <button
+                type="button"
+                className="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cart
               </button>
             </div>
           </div>

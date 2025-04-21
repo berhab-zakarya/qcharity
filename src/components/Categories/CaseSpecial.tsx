@@ -24,7 +24,7 @@ const CaseSpecial = () => {
       state: {
         imageUrl: item.image,
         title: item.title,
-        description: item.description
+        description: item.descriptionMax
       }
     });
   };
@@ -34,30 +34,35 @@ const CaseSpecial = () => {
       image: "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
       title: "Urgent Medical Aid",
       description: "Supporting critical healthcare needs for families in crisis",
+      descriptionMax: "Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis .",
       link: "/cases/medical-aid",
     },
     {
       image: "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
       title: "Food Security",
       description: "Providing essential nutrition to vulnerable communities",
+      descriptionMax: "Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis .",
       link: "/cases/food-security",
     },
     {
       image: "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
       title: "Education Support",
       description: "Enabling access to quality education for children",
+      descriptionMax: "Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis .",
       link: "/cases/education",
     },
     {
       image: "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
       title: "Shelter Assistance",
       description: "Building safe homes for displaced families",
+      descriptionMax: "Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis .",
       link: "/cases/shelter",
     },
     {
       image: "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
       title: "Water Projects",
       description: "Delivering clean water to communities in need",
+      descriptionMax: "Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis .",
       link: "/cases/water",
     },
   ];

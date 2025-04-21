@@ -8,23 +8,18 @@ import Vacation from "../components/Categories/Voluntary";
 
 const SocialWelfare = () => {
   useEffect(() => {
-    import("../qc.global.css"); // تحميل CSS الخاص بـ Home فقط
+    import("../qc.global.css"); 
   }, []);
-  const [donationType, setDonationType] = useState("1"); // 1 for One Time, 2 for Monthly
+  const [donationType, setDonationType] = useState("1"); 
   const [donationAmount, setDonationAmount] = useState("");
 
   const DonateNowMainAccountDetails = () => {
-    // Implementation of donation logic would go here
+  
     alert("Donation process initiated with amount: " + donationAmount);
   };
 
   useEffect(() => {
-    // Initialize popovers and tooltips (replacement for Bootstrap's initialization)
-    // You would normally use useEffect to initialize third-party libraries
-
-    // In a real implementation, you'd use something like:
-    // const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-    // const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el));
+    
     setDonationType("1");
   }, []);
 
