@@ -38,6 +38,197 @@ export default function LoginComponent() {
     }
   }, [userInput]);
 
+  // Add new state for registration modal
+  const [showRegister, setShowRegister] = useState(false);
+  const [registerData, setRegisterData] = useState({
+    name: '',
+    surname: '',
+    email: '',
+    username: '',
+    password: '',
+    sex: '',
+    address: '',
+    phone: '',
+    birthDate: '',
+    nationalId: '',
+    formationFiles: null as File | null | undefined,
+    healthState: ''
+  });
+
+  const handleRegisterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Registration data:', registerData);
+    // Add your registration logic here
+    setShowRegister(false);
+  };
+
+  // Update the modal dialog styles in the registerModal constant
+  const registerModal = (
+    <div className={`modal fade ${showRegister ? 'show' : ''}`} 
+         style={{ 
+           display: showRegister ? 'block' : 'none',
+           backgroundColor: 'rgba(0,0,0,0.5)'
+         }}
+         id="registerModal">
+      <div className="modal-dialog modal-lg" style={{ 
+        display: 'flex',
+        alignItems: 'center',
+        minHeight: '100vh',
+        margin: '20px auto'
+      }}>
+        <div className="modal-content" style={{ maxHeight: '90vh' }}>
+          <div className="modal-header">
+            <h5 className="modal-title">Register New Account</h5>
+            <button type="button" className="btn-close" onClick={() => setShowRegister(false)}></button>
+          </div>
+          <div className="modal-body" style={{ 
+            overflowY: 'auto',
+            maxHeight: 'calc(90vh - 120px)' // Subtract header and footer height
+          }}>
+            <form onSubmit={handleRegisterSubmit}>
+              <div className="row g-3">
+                {/* Personal Information */}
+                <div className="col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="First Name"
+                    value={registerData.name}
+                    onChange={(e) => setRegisterData({...registerData, name: e.target.value})}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Surname"
+                    value={registerData.surname}
+                    onChange={(e) => setRegisterData({...registerData, surname: e.target.value})}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
+                  <input
+                    type="email"
+                    className="form-control"
+                    placeholder="Email"
+                    value={registerData.email}
+                    onChange={(e) => setRegisterData({...registerData, email: e.target.value})}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Username"
+                    value={registerData.username}
+                    onChange={(e) => setRegisterData({...registerData, username: e.target.value})}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
+                  <input
+                    type="password"
+                    className="form-control"
+                    placeholder="Password"
+                    value={registerData.password}
+                    onChange={(e) => setRegisterData({...registerData, password: e.target.value})}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
+                  <select 
+                    className="form-select"
+                    value={registerData.sex}
+                    onChange={(e) => setRegisterData({...registerData, sex: e.target.value})}
+                    required
+                  >
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+
+                {/* Contact Information */}
+                <div className="col-12">
+                  <textarea
+                    className="form-control"
+                    placeholder="Address"
+                    value={registerData.address}
+                    onChange={(e) => setRegisterData({...registerData, address: e.target.value})}
+                    required
+                  ></textarea>
+                </div>
+                <div className="col-md-6">
+                  <input
+                    type="tel"
+                    className="form-control"
+                    placeholder="Phone Number"
+                    value={registerData.phone}
+                    onChange={(e) => setRegisterData({...registerData, phone: e.target.value})}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
+                  <input
+                    type="date"
+                    className="form-control"
+                    placeholder="Birth Date"
+                    value={registerData.birthDate}
+                    onChange={(e) => setRegisterData({...registerData, birthDate: e.target.value})}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="National ID Number"
+                    value={registerData.nationalId}
+                    onChange={(e) => setRegisterData({...registerData, nationalId: e.target.value})}
+                    required
+                  />
+                </div>
+
+                {/* Additional Information */}
+                <div className="col-md-6">
+                  <input
+                    type="file"
+                    className="form-control"
+                    accept=".pdf,.doc,.docx"
+                    onChange={(e) => setRegisterData({...registerData, formationFiles: e.target.files?.[0]})}
+                    required
+                  />
+                  <small className="text-muted">Upload formation documents</small>
+                </div>
+                <div className="col-12">
+                  <textarea
+                    className="form-control"
+                    placeholder="Health State Description"
+                    value={registerData.healthState}
+                    onChange={(e) => setRegisterData({...registerData, healthState: e.target.value})}
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" onClick={() => setShowRegister(false)}>
+                  Close
+                </button>
+                <button type="submit" className="btn btn-primary">
+                  Register
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div id="home-main-wrapper" className="pageForScroll">
       <div className="">
@@ -50,21 +241,14 @@ export default function LoginComponent() {
             className="col-xs-12 d-flex padding-20-v align-items-center justify-content-around "
             style={{ borderBottom: "1px solid #D9D9D9" }}
           >
-            <a href="/en/global/q" className="col-xs-6 padding-none">
+            <a href="#" className="col-xs-6 padding-none">
               <img
                 className="col-xs-8 col-sm-6 padding-none w-2/3"
                 src="/Content/images/QC-Logo-New.png"
                 alt="QC Logo"
               />
             </a>
-            <div className="col-xs-6 col-sm-4 col-sm-offset-2 d-flex justify-content-end padding-none">
-              <a
-                href="/ar/qa/account/login"
-                className="col-xs-6 padding-less change-language LoginMenuA"
-              >
-                عربي - قطر
-              </a>
-            </div>
+           
           </div>
         </div>
 
@@ -78,7 +262,7 @@ export default function LoginComponent() {
                   <div className="row">
                     <div className="col-md-12 col-lg-6 col-lg-offset-3 text-center w-full w_full">
                       <a
-                        href="/en/global/account/login"
+                        href="/"
                         id="btn-back"
                         className="col-xs-12 padding-none margin-50-top margin-40-bottom hidden"
                       >
@@ -265,7 +449,7 @@ export default function LoginComponent() {
                       <div id="altLoginOptions">
                         <div className="col-xs-12 text-center-md margin-24-top">
                           <a
-                            href="/en/global/account/cantlogin"
+                            href="#"
                             className="font-14 bold margin-0-bottom underline"
                           >
                             Can&apos;t login?
@@ -275,8 +459,12 @@ export default function LoginComponent() {
                           <p className="font-14">
                             Don&apos;t have account?{" "}
                             <a
-                              href="/en/global/account/register"
+                              href="#"
                               className="underline bold"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                setShowRegister(true);
+                              }}
                             >
                               Please Register
                             </a>
@@ -294,7 +482,7 @@ export default function LoginComponent() {
               <div className="col-xs-12 d-flex margin-50-top align-items-center justify-content-between">
                 <a href="#" className="col-xs-1">
                   <img
-                    src="/logo.jpg"
+                    src="/logo.svg"
                     alt="QC Logo"
                     width={100}
                     height={100}
@@ -322,6 +510,8 @@ export default function LoginComponent() {
           </div>
         </div>
       </div>
+      {/* Add modal to the DOM */}
+      {registerModal}
     </div>
   );
 }

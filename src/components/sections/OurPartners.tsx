@@ -7,11 +7,16 @@ const OurPartners = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
-    organizationName: '',
+    name: '',
     email: '',
     phone: '',
-    country: '',
-    description: ''
+    domain: '',
+    organizationContribution: '',
+    organizationNeeds: '',
+    collaborationDuration: '',
+    address: '',
+    website: '',
+    representativeName: ''
   });
 
   const partnersList1 = [
@@ -181,14 +186,14 @@ const OurPartners = () => {
           <Modal.Body>
             <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-3">
-                <Form.Label>Organization Name</Form.Label>
+                <Form.Label>Name</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="Enter your organization name"
-                  value={formData.organizationName}
+                  placeholder="Enter your name"
+                  value={formData.name}
                   onChange={(e) => setFormData({
                     ...formData,
-                    organizationName: e.target.value
+                    name: e.target.value
                   })}
                   required
                 />
@@ -223,29 +228,99 @@ const OurPartners = () => {
               </Form.Group>
 
               <Form.Group className="mb-3">
-                <Form.Label>Country</Form.Label>
+                <Form.Label>Domain of Intervention</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="Enter your country"
-                  value={formData.country}
+                  placeholder="Enter your domain of intervention"
+                  value={formData.domain}
                   onChange={(e) => setFormData({
                     ...formData,
-                    country: e.target.value
+                    domain: e.target.value
                   })}
                   required
                 />
               </Form.Group>
 
-              <Form.Group className="mb-4">
-                <Form.Label>Tell us about your organization</Form.Label>
+              <Form.Group className="mb-3">
+                <Form.Label>Organization Contribution</Form.Label>
                 <Form.Control
                   as="textarea"
-                  rows={4}
-                  placeholder="Describe your organization and partnership goals"
-                  value={formData.description}
+                  rows={3}
+                  placeholder="Describe what your organization can contribute"
+                  value={formData.organizationContribution}
                   onChange={(e) => setFormData({
                     ...formData,
-                    description: e.target.value
+                    organizationContribution: e.target.value
+                  })}
+                  required
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3">
+                <Form.Label>Organization Needs</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  placeholder="Describe your organization's needs"
+                  value={formData.organizationNeeds}
+                  onChange={(e) => setFormData({
+                    ...formData,
+                    organizationNeeds: e.target.value
+                  })}
+                  required
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3">
+                <Form.Label>Collaboration Duration</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter desired collaboration duration"
+                  value={formData.collaborationDuration}
+                  onChange={(e) => setFormData({
+                    ...formData,
+                    collaborationDuration: e.target.value
+                  })}
+                  required
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3">
+                <Form.Label>Address</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter your address"
+                  value={formData.address}
+                  onChange={(e) => setFormData({
+                    ...formData,
+                    address: e.target.value
+                  })}
+                  required
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-3">
+                <Form.Label>Website</Form.Label>
+                <Form.Control
+                  type="url"
+                  placeholder="Enter your website URL"
+                  value={formData.website}
+                  onChange={(e) => setFormData({
+                    ...formData,
+                    website: e.target.value
+                  })}
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-4">
+                <Form.Label>Representative Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Enter representative's name"
+                  value={formData.representativeName}
+                  onChange={(e) => setFormData({
+                    ...formData,
+                    representativeName: e.target.value
                   })}
                   required
                 />

@@ -11,12 +11,16 @@ const SocialWelfare = () => {
     import("../qc.global.css"); 
   }, []);
   const [donationType, setDonationType] = useState("1"); 
-  const [donationAmount, setDonationAmount] = useState("");
+ 
+  const [paymentDetails, setPaymentDetails] = useState({
+    date: '',
+    ccpNumber: '',
+    ccpCode: '',
+    paymentType: '',
+    amount: ''
+  });
 
-  const DonateNowMainAccountDetails = () => {
-  
-    alert("Donation process initiated with amount: " + donationAmount);
-  };
+
 
   useEffect(() => {
     
@@ -123,7 +127,7 @@ const SocialWelfare = () => {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModalLabel">
-                Donate now to provide
+                Donation Details
               </h5>
               <button
                 type="button"
@@ -133,227 +137,125 @@ const SocialWelfare = () => {
               ></button>
             </div>
             <div className="modal-body">
-              <div className="row col-12 mt-2 mb-7 justify-content-center gx-0">
-                <label
-                  className="col-5 col-md-3 rounded-pill-start rounded-0 btn btn-primary text-center"
-                  id="rbOneTimeDonationLabel"
-                >
-                  <input
-                    type="radio"
-                    name="rdoDonation1"
-                    value="1"
-                    checked={donationType === "1"}
-                    id="rbOneTimeDonation"
-                    hidden
-                    onChange={() => {}}
-                  />
-                  One Time
-                </label>
-                <label
-                  className="col-5 col-md-3 rounded-pill-end rounded-0 btn btn-outline-primary text-center"
-                  id="rbMonthlyDonationLabel"
-                >
-                  <input
-                    type="radio"
-                    name="rdoDonation1"
-                    value="2"
-                    checked={donationType === "2"}
-                    id="rbMonthlyDonation"
-                    hidden
-                    onChange={() => {}}
-                  />
-                  Monthly
-                </label>
-              </div>
-
-              <div className="text-center">
-                <p className="fw-medium text-uppercase">Set donation amount</p>
-              </div>
-
-              <div className="col-11 col-md-9 offset-md-1">
-                <div className="row input-group justify-content-between">
-                  <div className="col-1">
-                    <button
-                      className="btn btn-outline-primary rounded-circle px-4 btnAmounts"
-                      onClick={() => {}}
-                      type="button"
-                    >
-                      50
-                    </button>
-                  </div>
-                  <div className="col-1">
-                    <button
-                      className="btn btn-outline-primary rounded-circle px-3 btnAmounts"
-                      onClick={() => {}}
-                      type="button"
-                    >
-                      100
-                    </button>
-                  </div>
-                  <div className="col-1">
-                    <button
-                      className="btn btn-outline-primary rounded-circle px-3 btnAmounts"
-                      onClick={() => {}}
-                      type="button"
-                    >
-                      300
-                    </button>
-                  </div>
-                  <div className="col-1">
-                    <button
-                      className="btn btn-outline-primary rounded-circle px-3 btnAmounts"
-                      onClick={() => {}}
-                      type="button"
-                    >
-                      500
-                    </button>
-                  </div>
-                  <div className="col-1">
-                    <button
-                      className="btn btn-outline-primary rounded-circle px-2 btnAmounts"
-                      onClick={() => {}}
-                      type="button"
-                    >
-                      1000
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-12 mt-7">
-                <div className="col-12 p-0">
-                  <div className="col-12 p-0">
+              {/* Add Donation Type Selector */}
+              <div className="col-12 mb-4">
+                <div className="row col-12 justify-content-center gx-0">
+                  <label className={`col-5 col-md-3 rounded-pill-start rounded-0 btn ${donationType === "1" ? 'btn-primary' : 'btn-outline-primary'} text-center`}>
                     <input
-                      className="col-12 form-control text-center rounded-pill"
-                      id="txtTotalAmountFastAccountSadaqaDon1"
-                      name="txtTotalAmountFastAccountSadaqa"
-                      placeholder="Another Amount Q.R."
-                      value={donationAmount}
-                      onChange={(e) => setDonationAmount(e.target.value)}
+                      type="radio"
+                      name="rdoDonation"
+                      value="1"
+                      checked={donationType === "1"}
+                      onChange={(e) => setDonationType(e.target.value)}
+                      hidden
                     />
-                  </div>
+                    One Time
+                  </label>
+                  <label className={`col-5 col-md-3 rounded-pill-end rounded-0 btn ${donationType === "2" ? 'btn-primary' : 'btn-outline-primary'} text-center`}>
+                    <input
+                      type="radio"
+                      name="rdoDonation"
+                      value="2"
+                      checked={donationType === "2"}
+                      onChange={(e) => setDonationType(e.target.value)}
+                      hidden
+                    />
+                    Monthly
+                  </label>
                 </div>
               </div>
+
+              <form className="row g-3">
+                {/* Date */}
+                <div className="col-md-6">
+                  <label className="form-label">Date</label>
+                  <input
+                    type="date"
+                    className="form-control"
+                    value={paymentDetails.date}
+                    onChange={(e) => setPaymentDetails({...paymentDetails, date: e.target.value})}
+                    required
+                  />
+                </div>
+
+                {/* CCP Number */}
+                <div className="col-md-6">
+                  <label className="form-label">CCP Number</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter CCP Number"
+                    value={paymentDetails.ccpNumber}
+                    onChange={(e) => setPaymentDetails({...paymentDetails, ccpNumber: e.target.value})}
+                    required
+                  />
+                </div>
+
+                {/* CCP Code */}
+                <div className="col-md-6">
+                  <label className="form-label">CCP Code</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter CCP Code"
+                    value={paymentDetails.ccpCode}
+                    onChange={(e) => setPaymentDetails({...paymentDetails, ccpCode: e.target.value})}
+                    required
+                  />
+                </div>
+
+                {/* Payment Type */}
+                <div className="col-md-6">
+                  <label className="form-label">Payment Type</label>
+                  <select 
+                    className="form-select"
+                    value={paymentDetails.paymentType}
+                    onChange={(e) => setPaymentDetails({...paymentDetails, paymentType: e.target.value})}
+                    required
+                  >
+                    <option value="">Select payment type</option>
+                    <option value="ccp">CCP</option>
+                    <option value="card">Credit Card</option>
+                    <option value="transfer">Bank Transfer</option>
+                  </select>
+                </div>
+
+                {/* Amount */}
+                <div className="col-12">
+                  <label className="form-label">Amount</label>
+                  <div className="input-group">
+                    <input
+                      type="number"
+                      className="form-control"
+                      placeholder="Enter amount"
+                      value={paymentDetails.amount}
+                      onChange={(e) => setPaymentDetails({...paymentDetails, amount: e.target.value})}
+                      required
+                    />
+                    <span className="input-group-text">Q.R.</span>
+                  </div>
+                </div>
+              </form>
             </div>
 
             <div className="modal-footer justify-content-between mt-md-15">
               <button
                 type="button"
-                onClick={DonateNowMainAccountDetails}
+                onClick={() => {
+                  console.log('Payment details:', paymentDetails);
+                  // Add your donation processing logic here
+                }}
                 className="btn btn-primary"
               >
-                Donate now
+                Confirm Donation
               </button>
               <button
                 type="button"
                 className="btn btn-secondary"
-                id="toastbtn"
                 data-bs-dismiss="modal"
               >
-                Cart
+                Cancel
               </button>
-            </div>
-            <div className="modal-outside d-none d-xl-block">
-              <div className="col-12">
-                <a
-                  href="javascript:;"
-                  role="button"
-                  className="popover-test text-white"
-                  data-bs-placement="top"
-                  data-bs-trigger="focus"
-                  data-bs-toggle="popover"
-                  data-bs-content="All credit card donations are processed through a secure payment gateway. Qatar Charity will never release your personal information to outside parties unless authorized to do so. You will be able to track your donation until the completion of your project via our application. "
-                >
-                  Is my donaton secure?
-                </a>
-              </div>
-              <div className="col-12">
-                <a
-                  href="javascript:;"
-                  role="button"
-                  className="popover-test text-white"
-                  data-bs-placement="top"
-                  data-bs-trigger="focus"
-                  data-bs-toggle="popover"
-                  data-bs-content="Yes. You may choose to suspend a scheduled periodic donation anytime from your personal page or through our customer care. If you cancel your periodic donation before payment is due, no further payments will be withdrawn."
-                >
-                  Can I cancel my recurring donation at anytime?
-                </a>
-              </div>
-            </div>
-
-            <div
-              className="our-work-questions accordion accordion-flush d-block d-xl-none p-5 pt-0 py-5"
-              id="accordionFaq"
-            >
-              {/* Question 1 */}
-              <div className="accordion-item">
-                <p className="accordion-header h4" id="ques1">
-                  <button
-                    className="accordion-button collapsed accordion-button-plus text-start ps-md-0 ps-2"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#ques1Ans"
-                    aria-expanded="false"
-                    aria-controls="ques1Ans"
-                  >
-                    <div className="">
-                      <small>Is my donation secure?</small>
-                    </div>
-                  </button>
-                </p>
-                <div
-                  id="ques1Ans"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="ques1"
-                  data-bs-parent="#accordionFaq"
-                >
-                  <div className="accordion-body">
-                    <p className="col">
-                      All credit card donations are processed through a secure
-                      payment gateway. Qatar Charity will never release your
-                      personal information to outside parties unless authorized
-                      to do so. You will be able to track your donation until
-                      the completion of your project via our application.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Question 2 */}
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="ques2">
-                  <button
-                    className="accordion-button collapsed accordion-button-plus text-start ps-md-0 ps-2 py-5"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#ques2Ans"
-                    aria-expanded="false"
-                    aria-controls="ques2Ans"
-                  >
-                    <div className="">
-                      <small>
-                        Can I cancel my recurring donation at anytime?
-                      </small>
-                    </div>
-                  </button>
-                </h2>
-                <div
-                  id="ques2Ans"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="ques2"
-                  data-bs-parent="#accordionFaq"
-                >
-                  <div className="accordion-body">
-                    <p className="col">
-                      Yes. You may choose to suspend a scheduled periodic
-                      donation anytime from your personal page or through our
-                      customer care. If you cancel your periodic donation before
-                      payment is due, no further payments will be withdrawn.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

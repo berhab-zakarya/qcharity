@@ -6,12 +6,20 @@ const NewsComponent = () => {
   const navigate = useNavigate();
   const { imageUrl, title, description, date, location: eventLocation } = location.state;
 
-  // Add state for donation
-  const [donationType, setDonationType] = useState("1");
-  const [donationAmount, setDonationAmount] = useState("");
+  // Replace donation state with payment details state
+  const [paymentDetails, setPaymentDetails] = useState({
+    date: '',
+    ccpNumber: '',
+    ccpCode: '',
+    paymentType: '',
+    amount: ''
+  });
+
+  // Add new state for donation type
+  const [donationType, setDonationType] = useState("1"); // "1" for one-time, "2" for monthly
 
   const handleDonation = () => {
-    alert("Donation process initiated with amount: " + donationAmount);
+    alert("Payment initiated with details: " + JSON.stringify(paymentDetails));
   };
 
   return (
@@ -99,70 +107,116 @@ const NewsComponent = () => {
         </div>
       </div>
 
-      {/* Add Donation Modal */}
+      {/* Update Modal Content */}
       <div className="modal fade" id="donationModal" aria-labelledby="donationModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="donationModalLabel">
-                Donate now to help
+                Payment Details
               </h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
-              <div className="row col-12 mt-2 mb-7 justify-content-center gx-0">
-                <label className="col-5 col-md-3 rounded-pill-start rounded-0 btn btn-primary text-center">
-                  <input
-                    type="radio"
-                    name="rdoDonation"
-                    value="1"
-                    checked={donationType === "1"}
-                    onChange={(e) => setDonationType(e.target.value)}
-                    hidden
-                  />
-                  One Time
-                </label>
-                <label className="col-5 col-md-3 rounded-pill-end rounded-0 btn btn-outline-primary text-center">
-                  <input
-                    type="radio"
-                    name="rdoDonation"
-                    value="2"
-                    checked={donationType === "2"}
-                    onChange={(e) => setDonationType(e.target.value)}
-                    hidden
-                  />
-                  Monthly
-                </label>
-              </div>
-
-              <div className="text-center">
-                <p className="fw-medium text-uppercase">Set donation amount</p>
-              </div>
-
-              <div className="col-11 col-md-9 offset-md-1">
-                <div className="row input-group justify-content-between">
-                  {[50, 100, 300, 500, 1000].map((amount) => (
-                    <div className="col-1" key={amount}>
-                      <button
-                        className="btn btn-outline-primary rounded-circle px-2 btnAmounts"
-                        onClick={() => setDonationAmount(amount.toString())}
-                        type="button"
-                      >
-                        {amount}
-                      </button>
-                    </div>
-                  ))}
+              <form className="row g-3">
+                {/* Donation Type Selection */}
+                <div className="col-12 mb-3">
+                  <div className="row col-12 justify-content-center gx-0">
+                    <label className="col-5 col-md-3 rounded-pill-start rounded-0 btn btn-primary text-center">
+                      <input
+                        type="radio"
+                        name="rdoDonation"
+                        value="1"
+                        checked={donationType === "1"}
+                        onChange={(e) => setDonationType(e.target.value)}
+                        hidden
+                      />
+                      One Time
+                    </label>
+                    <label className="col-5 col-md-3 rounded-pill-end rounded-0 btn btn-outline-primary text-center">
+                      <input
+                        type="radio"
+                        name="rdoDonation"
+                        value="2"
+                        checked={donationType === "2"}
+                        onChange={(e) => setDonationType(e.target.value)}
+                        hidden
+                      />
+                      Monthly
+                    </label>
+                  </div>
                 </div>
-              </div>
 
-              <div className="col-12 mt-7">
-                <input
-                  className="col-12 form-control text-center rounded-pill"
-                  placeholder="Another Amount Q.R."
-                  value={donationAmount}
-                  onChange={(e) => setDonationAmount(e.target.value)}
-                />
-              </div>
+                {/* Date */}
+                <div className="col-md-6">
+                  <label className="form-label">Date</label>
+                  <input
+                    type="date"
+                    className="form-control"
+                    value={paymentDetails.date}
+                    onChange={(e) => setPaymentDetails({...paymentDetails, date: e.target.value})}
+                    required
+                  />
+                </div>
+
+                {/* CCP Number */}
+                <div className="col-md-6">
+                  <label className="form-label">CCP Number</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter CCP Number"
+                    value={paymentDetails.ccpNumber}
+                    onChange={(e) => setPaymentDetails({...paymentDetails, ccpNumber: e.target.value})}
+                    required
+                  />
+                </div>
+
+                {/* CCP Code */}
+                <div className="col-md-6">
+                  <label className="form-label">CCP Code</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter CCP Code"
+                    value={paymentDetails.ccpCode}
+                    onChange={(e) => setPaymentDetails({...paymentDetails, ccpCode: e.target.value})}
+                    required
+                  />
+                </div>
+
+                {/* Payment Type */}
+                <div className="col-md-6">
+                  <label className="form-label">Payment Type</label>
+                  <select 
+                    className="form-select"
+                    value={paymentDetails.paymentType}
+                    onChange={(e) => setPaymentDetails({...paymentDetails, paymentType: e.target.value})}
+                    required
+                  >
+                    <option value="">Select payment type</option>
+                    <option value="ccp">CCP</option>
+                    <option value="card">Credit Card</option>
+                    <option value="transfer">Bank Transfer</option>
+                  </select>
+                </div>
+
+                {/* Amount */}
+                <div className="col-12">
+                  <label className="form-label">Amount</label>
+                  <div className="input-group">
+                    <input
+                      type="number"
+                      className="form-control"
+                      placeholder="Enter amount"
+                      value={paymentDetails.amount}
+                      onChange={(e) => setPaymentDetails({...paymentDetails, amount: e.target.value})}
+                      required
+                    />
+                    <span className="input-group-text">Q.R.</span>
+                  </div>
+                </div>
+              </form>
             </div>
 
             <div className="modal-footer justify-content-between mt-md-15">
@@ -171,14 +225,14 @@ const NewsComponent = () => {
                 onClick={handleDonation}
                 className="btn btn-primary"
               >
-                Donate now
+                Confirm Payment
               </button>
               <button
                 type="button"
                 className="btn btn-secondary"
                 data-bs-dismiss="modal"
               >
-                Cart
+                Cancel
               </button>
             </div>
           </div>

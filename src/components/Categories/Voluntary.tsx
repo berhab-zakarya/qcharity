@@ -58,30 +58,35 @@ const Voluntary = () => {
                   image:
                     "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
                   title: "Urgent Medical Aid",
+                  description: "Help provide essential medical care and support to those in need. Join our medical assistance programs and make a difference in people's lives.",
                   link: "/cases/medical-aid",
                 },
                 {
                   image:
                     "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
                   title: "Food Security",
+                  description: "Support our food distribution initiatives and help combat hunger. Work with us to ensure families have access to nutritious meals.",
                   link: "/cases/food-security",
                 },
                 {
                   image:
                     "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
                   title: "Education Support",
+                  description: "Volunteer to help children access quality education. Participate in teaching, mentoring, and educational resource distribution.",
                   link: "/cases/education",
                 },
                 {
                   image:
                     "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
                   title: "Shelter Assistance",
+                  description: "Join our efforts to provide safe housing solutions. Help build and maintain shelters for displaced families and communities.",
                   link: "/cases/shelter",
                 },
                 {
                   image:
                     "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
                   title: "Water Projects",
+                  description: "Support clean water initiatives and help communities access safe drinking water. Participate in well-building and water distribution projects.",
                   link: "/cases/water",
                 },
               ].map((item, index) => (
@@ -104,6 +109,9 @@ const Voluntary = () => {
                     </div>
                     <div className="case-content p-4 bg-white">
                       <h5 className="fw-bold mb-2">{item.title}</h5>
+                      <p className="text-muted mb-3" style={{ fontSize: '0.9rem' }}>
+                        {item.description}
+                      </p>
                       <div className="d-flex justify-content-between align-items-center mt-3">
                         <button
                           onClick={() =>
