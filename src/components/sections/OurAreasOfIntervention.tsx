@@ -7,56 +7,64 @@ const OurAreasOfIntervention = () => {
       title: 'Social Welfare',
       description: 'We help vulnerable communities prepare for disasters and emergencies, survive and recover.',
       image: '/images/Humanitarianassistance.jpg',
-      icon: '/icons/siren.svg'
+      icon: '/icons/siren.svg',
+      link:'/ourwork'
     },
     {
       id: 'CleanWaterAndSanitation',
       title: 'Water, sanitation and hygiene',
       description: 'We work with local communities to bring safe water and sanitation facilities closer to those who need it most',
       image: '/images/Water-S.png',
-      icon: '/icons/Union 39.svg'
+      icon: '/icons/Union 39.svg',
+      link:'/QatarCharityCleanWater'
     },
     {
       id: 'HealthNutrition',
       title: 'Health',
       description: 'We work with partners to strengthen health systems and improve access to healthcare in poor communities',
       image: '/images/Health.png',
-      icon: '/icons/Path-16537.svg'
+      icon: '/icons/Path-16537.svg',
+      link:'/QatarCharityHealth'
     },
     {
       id: 'SocialHousing',
       title: 'Social housing',
       description: 'We support local governments\' social protection systems and social assistance schemes.',
       image: '/images/Social housing.png',
-      icon: '/icons/Union-40.svg'
+      icon: '/icons/Union-40.svg',
+      link:'/SocialHousing'
     },
     {
       id: 'Education',
       title: 'Education',
       description: 'We work with global partners and local communities to make quality education and safe learning accessible to all.',
       image: '/images/Education.png',
-      icon: '/icons/pencil.svg'
+      icon: '/icons/pencil.svg',
+      link:'/QatarCharityEducation'
     },
     {
       id: 'SocialCohesion',
       title: 'Social cohesion',
       description: 'We provide vulnerable children with a safe and enabling environment where they can thrive and prosper.',
       image: '/images/Social cohesion.png',
-      icon: '/icons/Union-41.svg'
+      icon: '/icons/Union-41.svg',
+      link:'/QatarCharitySocialCohesion'
     },
     {
       id: 'EconomicEmpowerment',
       title: 'Economic Empowerment',
       description: 'We support global efforts to end hunger and achieve food security.',
       image: '/images/Economic Empowerment.png',
-      icon: '/icons/money.svg'
+      icon: '/icons/money.svg',
+      link:'/EconomicEmpowerment'
     },
     {
       id: 'FoodSecurity',
       title: 'Food Security',
       description: 'We help vulnerable communities prepare for disasters and emergencies, survive and recover.',
       image: '/images/food-s.png',
-      icon: '/icons/food-and-drink.svg'
+      icon: '/icons/food-and-drink.svg',
+      link:'/FoodSecurity'
     }
   ];
 
@@ -93,7 +101,7 @@ const OurAreasOfIntervention = () => {
             </p>
           </div>
           <p className="col-md-5 col-lg-6 d-none d-md-block align-content-end text-end v-line-after-pimary f-xs">
-            All photos Copyright @ Qatar Charity
+            All photos Copyright @ Takaful
           </p>
           <div className="col mb-9"></div>
         </div>
@@ -101,7 +109,7 @@ const OurAreasOfIntervention = () => {
         <div className="row gx-6 gx-xl-9 row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-4 gx-lg-6 gx-xl-9">
           {interventionAreas.map((area, index) => (
             <div key={index} className="col d-flex align-items-center hovereffect">
-              <a href={`/ourwork?work=${area.id}`} className="card rounded-0 border-0 mb-9 mb-md-10 mb-lg-12 text-decoration-none text-body p-0">
+              <a href={area.link} className="card rounded-0 border-0 mb-9 mb-md-10 mb-lg-12 text-decoration-none text-body p-0">
                 <div className="card-img img-motion rounded-0">
                   <img 
                     className="col-12" 

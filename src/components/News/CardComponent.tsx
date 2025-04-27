@@ -8,28 +8,28 @@ export default function CardComponent() {
   const cards = [
     {
       id: 1,
-      title: "Main Card Title",
-      description: "A short description for the main card. This can contain additional information about the content.",
-      descriptionMax: "This is the full detailed description that will be shown on the news page. It can be much longer and contain more information about the event or news item.",
-      imageUrl: "/content/QCGlobal/images/Where-1.jpg",
+      title: "Natural Disaster",
+      description: "Thousands need urgent shelter, food, and medical aid after the earthquake",
+      descriptionMax: "Following a powerful earthquake that struck a densely populated area, thousands of families are left homeless, without food or clean water. The infrastructure has been completely destroyed, making access to humanitarian aid extremely difficult. The affected populations are sleeping outdoors, without protection from the elements, and lack basic healthcare. By making a financial donation, you enable the rapid delivery of tents, food kits, essential medicines, and clean water. Every contribution counts in providing victims with a minimum of dignity and hope during this ordeal.",
+      imageUrl: "/news/N1.jpg",
       date: "2025-04-21",
       location: "Qatar"
     },
     {
       id: 2,
-      title: "Second Card Title", 
-      description: "A brief description for the second card with some additional details.",
-      descriptionMax: "This is the full detailed description that will be shown on the news page. It can be much longer and contain more information about the event or news item.",
-      imageUrl: "/content/QCGlobal/images/Where-1.jpg",
+      title: "Attack Victims:", 
+      description: "Support those injured and grieving after the tragic attack",
+      descriptionMax: "After an attack that caused many casualties, entire families are in shock, dealing with the loss of loved ones, serious injuries, and lasting trauma. The injured need specialized medical care, children need psychological support, and families need assistance to rebuild their lives. By contributing financially, you directly support the establishment of listening cells, medical care for victims, and emergency material aid. Your donation is a helping hand, a tangible act of compassion in the face of horror.",
+      imageUrl: "/news/N2.jpg",
       date: "2025-04-22",
       location: "Qatar"
     },
     {
       id: 3,
-      title: "Third Card Title",
-      description: "A concise description for the third card explaining its content.",
-      descriptionMax: "This is the full detailed description that will be shown on the news page. It can be much longer and contain more information about the event or news item.",
-      imageUrl: "/content/QCGlobal/images/Where-1.jpg",
+      title: "🇵🇸 Palestine Crisis",
+      description: "Help deliver water, food, and care to families in deep distress.",
+      descriptionMax: "In the Palestinian territories, the humanitarian situation is worsening day by day. Bombings, restrictions, and shortages have plunged thousands of families into absolute distress. Hospitals are overwhelmed, there are power cuts, and families lack water and food, with children suffering from trauma. The needs are immense. Your financial donation can help provide medicines, hot meals, infant formula, or support mobile clinics in the hardest-hit areas. By donating today, you show a strong gesture of solidarity where it is most needed.",
+      imageUrl: "/news/N3.webp",
       date: "2025-04-23",
       location: "Qatar"
     },

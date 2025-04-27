@@ -2,6 +2,7 @@ import React, { useState, FormEvent } from "react";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
 import BranchOffices from "../components/sections/BranchOffices";
+import { Toast, ToastContainer } from "react-bootstrap";
 
 interface ContactFormData {
   personName: string;
@@ -17,6 +18,7 @@ const Contactus: React.FC = () => {
     personMobile: "",
     message: "",
   });
+  const [showToast, setShowToast] = useState(false);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -32,12 +34,13 @@ const Contactus: React.FC = () => {
     e.preventDefault();
     // Add your form submission logic here
     console.log("Form submitted:", formData);
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 7000);
   };
 
   return (
     <>
       <Header />
-      <div className="text-center mt-4"></div>
       <main className="contactus bg-cover h-auto mt-20 pt-5">
         {" "}
         {/* or pt-md-6, pt-lg-7 */}
@@ -125,6 +128,33 @@ const Contactus: React.FC = () => {
             <div className="row justify-content-between">
               <div className="col-12 col-sm-5 col-lg-4">
                 <h1 className="display-4">Contact Form</h1>
+                {/* Toast appears just below Contact Form title */}
+                <ToastContainer
+                  position="bottom-center"
+                  className="p-3"
+                  style={{
+                    position: "relative",
+                    left: 0,
+                    bottom: "0",
+                    zIndex: 9999,
+                  }}
+                >
+                  <Toast
+                    show={showToast}
+                    onClose={() => setShowToast(false)}
+                    bg="success"
+                    delay={7000}
+                    autohide
+                  >
+                    <Toast.Header>
+                      <strong className="me-auto">Message Sent</strong>
+                    </Toast.Header>
+                    <Toast.Body className="text-white">
+                      Your message has been sent successfully.<br />
+                      We will review your request and contact you soon.
+                    </Toast.Body>
+                  </Toast>
+                </ToastContainer>
               </div>
 
               <div className="col-12 col-md-6">
@@ -208,7 +238,6 @@ const Contactus: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </>
   );

@@ -1,0 +1,1040 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Special Case</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body>
+        <div class="container">
+            <aside>
+                <!--start top-->
+                <div class="top">
+                    <div class="logo">
+                        <h2>َ<span class="danger">TAKAFUL</span></h2>
+                    </div>
+                    <div class="close" id="close_btn">
+                        <span class="material-symbols-outlined"> close </span>
+                    </div>
+                </div>
+                <!--end top-->
+                <div class="sidebar">
+                    <a href="index.html" >
+                        <span class="material-symbols-outlined">grid_view</span>
+                        <h3>Dashbord</h3>
+                    </a>
+                    <a href="Membres.html">
+                        <span class="material-symbols-outlined">person_outline</span>
+                        <h3>Membres</h3>
+                    </a>
+                    <a href="Volunteer.html">
+                        <span class="material-symbols-outlined">volunteer_activism</span>
+                        <h3>Volunteer</h3>
+                    </a>
+                    <a href="Messages.html">
+                        <span class="material-symbols-outlined">mail_outline</span>
+                        <h3>Messages</h3>
+                        <span class="msg_count">3</span>
+                    </a>
+                    <a href="News.html">
+                        <span class="material-symbols-outlined">receipt_long</span>
+                        <h3>News</h3>
+                    </a>
+                    <a href="Events.html">
+                        <span class="material-symbols-outlined">event_available</span>
+                        <h3>Events</h3>
+                    </a>
+                    <a href="Special_case.html" class="active">
+                        <span class="material-symbols-outlined">person_raised_hand</span>
+                        <h3>Special case</h3>
+                    </a>
+                    <a href="Collabs.html">
+                        <span class="material-symbols-outlined">diversity_3</span>
+                        <h3>Collaborations</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-symbols-outlined">logout</span>
+                        <h3>logout</h3>
+                    </a>
+                </div>
+        </aside>
+    <!--****************************************************************************************************************************************************************** -->
+            <main>
+                <h1 style="text-transform: uppercase; font-size: 32px;">Dashbord</h1>
+
+                <div class="date">
+                    <input type="date">
+                </div>
+            <!--Start inside-->
+                
+            <!--Star recent Order-->
+        <div class="recent_order">
+            <h1 style="text-transform: uppercase; font-size: 32px;">Special case</h1>
+            <div><br></div>
+            <h2 style="color: #b1005f;font-size: 32px;">Social Walfer</h2>
+            <div><br></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="font-size: 20px;">Speciale case name</th>
+                        <th style="font-size: 20px;">Speciale case id</th>
+                        <th style="font-size: 20px;">status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fatima  Morocco</td>
+                        <td>sc-sw-01</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kim Family  Indonesia</td>
+                        <td>sc-sw-02</td>
+                        <td>
+                            <button   onclick="confirmDelete()"  style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Joseph  Haiti</td>
+                        <td>sc-sw-03</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Noura  Turkey</td>
+                        <td>sc-sw-04</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td>Elias  Philippines</td>
+                        <td>sc-sw-05</td>
+                        <td>
+                            <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Not Yet
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Yassin familly Mali</td>
+                        <td>sc-sw-06</td>
+                        <td>
+                            <button style="background-color: rgb(255, 123, 0) ; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Denied
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Elias  India</td>
+                        <td>sc-sw-7</td>
+                        <td>
+                            <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Not Yet
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+
+                        <td ><a href="Forme/casspéciale.html" style="background-color: #b1005f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px;">Add Special Case</a></td>
+                        <td ></td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+<!--****************************************************************************************************************************-->
+            <div><br></div>
+            <h2 style="color: #b1005f;font-size: 32px;">Water Sanitation and Hygine</h2>
+            <div><br></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="font-size: 20px;">Speciale case name</th>
+                        <th style="font-size: 20px;">Speciale case id</th>
+                        <th style="font-size: 20px;">status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>Amina  Chad:Urgently needs access to clean water</td>
+                        <td>sc-wsh-01</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Musa  Somalia: 
+                            Needs proper sanitation at school to stay healthy</td>
+                        <td>sc-wsh-02</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td>The Diko Family  Niger</td>
+                        <td>sc-wsh-03</td>
+                        <td>
+                            <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Not Yet
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Yemen: 
+                            Needs hygiene kits and clean water</td>
+                        <td>sc-wsh-04</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kone Orphanage  Mali:
+                            Needs a water tank and hygiene training</td>
+                        <td>sc-wsh-05</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>The Diko Family  Tunisia</td>
+                        <td>sc-wsh-06</td>
+                        <td>
+                            <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Not Yet
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+
+                        <td ><a href="Forme/casspéciale.html" style="background-color: #b1005f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px;">Add Special Case</a></td>
+                        <td ></td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+  <!--****************************************************************************************************************************-->          
+            <div><br></div>
+            <h2 style="color: #b1005f;font-size: 32px;">Health</h2>
+            <div><br></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="font-size: 20px;">Speciale case name</th>
+                        <th style="font-size: 20px;">Speciale case id</th>
+                        <th style="font-size: 20px;">status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>Omar Gaza:Needs life-saving heart surgery he cannot afford</td>
+                        <td>sc-h-01</td>
+                        <td>
+                            <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Not Yet
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Salma Syria :Urgently needs consistent access</td>
+                        <td>sc-h-02</td>
+                        <td>
+                            <button style="background-color: rgb(255, 123, 0) ; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Denied
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Yassine Algeria: Requires spinal surgery to walk again</td>
+                        <td>sc-h-03</td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Lina Afghanistan:Needs medical care and nutrition</td>
+                        <td>sc-h-04</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Doumbia Twins Ivory Coast:Need neonatal equipment to survive</td>
+                        <td>sc-h-05</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nadia Moroco:Needs medical care and nutrition</td>
+                        <td>sc-h-06</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td></td>
+
+                        <td ><a href="Forme/casspéciale.html" style="background-color: #b1005f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px;">Add Special Case</a></td>
+                        <td ></td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        <!--****************************************************************************************************************************-->
+            <div><br></div>
+            <h2 style="color: #b1005f;font-size: 32px;">Social Housing</h2>
+            <div><br></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="font-size: 20px;">Speciale case name</th>
+                        <th style="font-size: 20px;">Speciale case id</th>
+                        <th style="font-size: 20px;">status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Haddad Family Lebanon:
+                            Needs a safe home</td>
+                        <td>sc-sh-01</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Fatou Senegal:
+                            Needs stable housing to raise her children</td>
+                        <td>sc-sh-02</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ahmed & Nadia Tunisia:
+                            Need home repairs to live safety</td>
+                        <td>sc-sh-03</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td>Rahim Family Pakistan:
+                            Urgently need long-term housing</td>
+                        <td>sc-sh-04</td>
+                        <td>
+                            <button  style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Not Yet
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Zara Morocco: 
+                            Needs affordable housing to support herself</td>
+                        <td>sc-sh-05</td>
+                        <td>
+                            <button style="background-color: rgb(255, 123, 0) ; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Denied
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Haddad Family Algeria:
+                            Needs a safe home</td>
+                        <td>sc-sh-06</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td></td>
+
+                        <td ><a href="Forme/casspéciale.html" style="background-color: #b1005f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px;">Add Special Case</a></td>
+                        <td ></td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <!--****************************************************************************************************************************-->
+            <div><br></div>
+            <h2 style="color: #b1005f;font-size: 32px;">Education</h2>
+            <div><br></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="font-size: 20px;">Speciale case name</th>
+                        <th style="font-size: 20px;">Speciale case id</th>
+                        <th style="font-size: 20px;">status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>Orphaned Child's Education Struggle</td>
+                        <td>sc-e-01</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Girl with Disability Needs Educational Support</td>
+                        <td>sc-e-02</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td>An Unemployed Father with Three School-Aged Children</td>
+                        <td>sc-e-03</td>
+                        <td>
+                            <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Not Yet
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Final-Year Student Facing Risk of Dropping Out</td>
+                        <td>sc-e-04</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Child in Remote Area with No School Nearby</td>
+                        <td>sc-e-05</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Woman with Disability Needs Educational Support </td>
+                        <td>sc-e-06</td>
+                        <td>
+                            <button style="background-color: rgb(255, 123, 0) ; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Denied
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+
+                        <td ><a href="Forme/casspéciale.html" style="background-color: #b1005f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px;">Add Special Case</a></td>
+                        <td ></td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            <!--****************************************************************************************************************************-->
+            <div><br></div>
+            <h2 style="color: #b1005f;font-size: 32px;">Social cohesion</h2>
+            <div><br></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="font-size: 20px;">Speciale case name</th>
+                        <th style="font-size: 20px;">Speciale case id</th>
+                        <th style="font-size: 20px;">status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Social Walfer</td>
+                        <td>sc-sc-01</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Social Walfer</td>
+                        <td>sc-sc-02</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Social Walfer</td>
+                        <td>sc-sc-03</td>
+                        <td>
+                            <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Social Walfer</td>
+                        <td>sc-sc-04</td>
+                        <td>
+                            <button style="background-color: rgb(255, 123, 0); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Denied
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Social Walfer</td>
+                        <td>sc-sc-05</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td>Social Walfer</td>
+                        <td>sc-sc-06</td>
+                        <td>
+                            <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Not Yet
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+
+                        <td ><a href="Forme/casspéciale.html" style="background-color: #b1005f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px;">Add Special Case</a></td>
+                        <td ></td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        <!--****************************************************************************************************************************-->
+            <div><br></div>
+            <h2 style="color: #b1005f;font-size: 32px;">Economic Empowerment</h2>
+            <div><br></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="font-size: 20px;">Speciale case name</th>
+                        <th style="font-size: 20px;">Speciale case id</th>
+                        <th style="font-size: 20px;">status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Orphan Without Support After the Death of His Parents</td>
+                        <td>sc-ee-01</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>A Family Living in Unhygienic Housing</td>
+                        <td>sc-ee-02</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <butto onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Divorced Mother Living Under Threat</td>
+                        <td>sc-ee-03</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Elderly Person Living in Total Isolation</td>
+                        <td>sc-ee-04</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td>University Student Struggling with Poverty and Isolation</td>
+                        <td>sc-ee-05</td>
+                        <td>
+                            <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Not Yet
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Divorced familly Living Under Threat</td>
+                        <td>sc-ee-06</td>
+                        <td>
+                            <button style="background-color: rgb(255, 123, 0) ; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Denied
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Orphan Without Support After the Death of His father</td>
+                        <td>sc-ee-07</td>
+                        <td>
+                            <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Not Yet
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+
+                        <td ><a href="Forme/casspéciale.html" style="background-color: #b1005f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px;">Add Special Case</a></td>
+                        <td ></td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            <!--****************************************************************************************************************************-->
+            
+            <div><br></div>
+            <h2 style="color: #b1005f;font-size: 32px;">Food Security</h2>
+            <div><br></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="font-size: 20px;">Speciale case name</th>
+                        <th style="font-size: 20px;">Speciale case id</th>
+                        <th style="font-size: 20px;">status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Farming Family in Off-Harvest Crisis</td>
+                        <td>sc-fs-01</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Elderly People Isolated Without Food Resources</td>
+                        <td>sc-fs-02</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Day Laborers Family Impacted by Health Crisis</td>
+                        <td>sc-fs-03</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Internally Displaced Persons Camp</td>
+                        <td>sc-fs-04</td>
+                        <td>
+                            <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Active
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td>Food-Insecure Students</td>
+                        <td>sc-fs-05</td>
+                        <td>
+                            <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Not Yet
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Elderly People Isolated Without Food Resources</td>
+                        <td>sc-fs-06</td>
+                        <td>
+                            <button style="background-color: rgb(255, 123, 0) ; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Denied
+                            </button>
+                        </td>
+                        <td>
+                            <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td></td>
+
+                        <td ><a href="Forme/casspéciale.html" style="background-color: #b1005f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px;">Add Special Case</a></td>
+                        <td ></td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            
+            
+            
+        </div>
+
+            <!--End recent Order-->
+</main>
+<!--**********************************************************************************************************************************-->
+            <div class="right">
+                <!--Start TOP-->
+            <div class="top">
+                <button id="menu_bar">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <div class="theme_toggler">
+                    <span class="material-symbols-outlined active">light_mode</span>
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p><b>Rayene</b></p>
+                        <p>Admine</p>
+                        <small class="text-muted"></small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="img/img1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    function confirmDelete() {
+        Swal.fire({
+            title: 'Are You Sure ?',
+            text: "This Action Wil Delate The Special Case !.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Validate',
+            cancelButtonText: 'Cancel',
+            confirmButtonColor: '#008000',
+            cancelButtonColor: '#FF0000'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: 'Delated !',
+                    text: 'The Special Case Has Been Successfully Delated .',
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#008000'
+                });
+            }
+        });
+    }
+</script>
+    </body>
+    </html>

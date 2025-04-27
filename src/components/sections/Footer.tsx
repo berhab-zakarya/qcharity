@@ -56,10 +56,10 @@ const Footer = () => {
             </div>
           </div>
           <div className="col-lg-5 offset-lg-0 col-xl-4 offset-xl-1 d-none d-lg-flex justify-content-end">
-            <a href="https://play.google.com/store/apps/details?id=com.qcandroidfull" target="_blank" rel="noreferrer">
+            <a href="" target="_blank" rel="noreferrer">
               <img src="/images/footer/play-store.svg" alt="" />
             </a>
-            <a href="https://itunes.apple.com/us/app/qtr-alkhyryt/id998227578?mt=8" className="ms-8"
+            <a href="" className="ms-8"
               target="_blank" rel="noreferrer">
               <img src="/images/footer/app-store.svg" alt="" />
             </a>
@@ -111,23 +111,23 @@ const Footer = () => {
 
         <div className="row gx-6 gx-xl-9">
           <div className="order-md-2 col-12 col-sm-6 col-md-4 offset-md-2 col-lg-3 offset-lg-3 gx-0 gx-md-9 d-flex justify-content-sm-between">
-            <a href="https://www.facebook.com/Qcharityglobal" target="_blank" rel="noreferrer">
+            <a href="" target="_blank" rel="noreferrer">
               <img src="/icons/btn-face-rounded.svg" alt="Facebook" />
             </a>
-            <a href="https://twitter.com/qcharityglobal" target="_blank" rel="noreferrer">
+            <a href="" target="_blank" rel="noreferrer">
               <img src="/icons/btn-twi-rounded.svg" alt="Twitter" />
             </a>
-            <a href="https://www.instagram.com/Qcharityglobal/" target="_blank" rel="noreferrer">
+            <a href="" target="_blank" rel="noreferrer">
               <img src="/icons/btn-insta-rounded.svg" alt="Instagram" />
             </a>
           </div>
           <div className="col-12 col-md-6">
             <p className="mb-0 lh-1">
               <sub>
-                Qatar Charity is a Qatar registered charity (6) and registered
+                Takaful Charity is a Algeria registered charity (6) and registered
                 organization 01006100
                 <br />
-                All rights reserved @Qatar Charity in 2025
+                All rights reserved @Takaful Charity in 2025
                 <br />
                 Version : 6.0.0.5
               </sub>

@@ -1,3 +1,4 @@
+import { Toast, ToastContainer } from "react-bootstrap";
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -17,9 +18,17 @@ const CaseSpecialPage = () => {
 
   // Add donation type state
   const [donationType, setDonationType] = useState("1"); // "1" for one-time, "2" for monthly
+  const [showToast, setShowToast] = useState(false);
 
   const handleDonation = () => {
-    alert("Donation process initiated with details: " + JSON.stringify(paymentDetails));
+    // ...any logic you want...
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 7000);
+    // Close modal if needed (Bootstrap 5)
+    const modal = window.document.getElementById('donationModal');
+    if (modal) {
+      (window as any).bootstrap?.Modal.getOrCreateInstance(modal).hide();
+    }
   };
 
   return (
@@ -223,6 +232,19 @@ const CaseSpecialPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Toast for donation confirmation */}
+      <ToastContainer position="bottom-end" className="p-3" style={{ zIndex: 9999 }}>
+        <Toast show={showToast} onClose={() => setShowToast(false)} bg="success" delay={7000} autohide>
+          <Toast.Header>
+            <strong className="me-auto">Donation Sent</strong>
+          </Toast.Header>
+          <Toast.Body className="text-white">
+            Your donation request has been sent.<br />
+            Thank you for your generosity!
+          </Toast.Body>
+        </Toast>
+      </ToastContainer>
     </>
   );
 };

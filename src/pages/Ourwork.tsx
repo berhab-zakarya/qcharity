@@ -1,6 +1,7 @@
 // Import CSS files
 
 import { useEffect, useState } from "react";
+import { Toast, ToastContainer } from "react-bootstrap";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
 import CaseSpecial from "../components/Categories/CaseSpecial";
@@ -20,12 +21,81 @@ const SocialWelfare = () => {
     amount: ''
   });
 
+  // بيانات الحالات الخاصة (Case Special)
+  const caseItems = [
+    {
+      image: "/category/SocialWelfare/wc1.jpg",
+      title: "Fatima – Morocco",
+      description: "Needs safe shelter after losing her home and loved ones in an earthquake.",
+      descriptionMax: "Fatima lost her home and two family members during the recent earthquake. Since then, she has been living under a plastic tarp with her young daughter. The trauma, combined with a lack of food and shelter, has left her emotionally and physically drained. She dreams of a safe place to call home again."
+    },
+    {
+      image: "/category/SocialWelfare/wc2.jpg",
+      title: "Kim Family – Indonesia",
+      description: "Needs recovery support after a tsunami destroyed their home and livelihood",
+      descriptionMax: "The Kim family’s village was destroyed by a tsunami. Their home and fishing boat—their only source of income—were washed away. Now, they are struggling to find food and clean water while living in a crowded emergency shelter. They need long-term recovery support to rebuild their lives."
+    },
+    {
+      image: "/category/SocialWelfare/wv3.jpg",
+      title: "Joseph – Haiti",
+      description: "Needs shelter, food, and aid after his neighborhood was destroyed.",
+      descriptionMax: "Joseph’s entire neighborhood was reduced to rubble. He spends his nights sleeping outdoors and his days searching for food. With no shelter and aftershocks continuing, he urgently needs help with housing, food, and rebuilding efforts."
+    },
+    {
+      image: "/category/SocialWelfare/wc4.jpg",
+      title: "Noura – Turkey",
+      description: "Needs emotional and financial support to care for her siblings after the quake.",
+      descriptionMax: "After losing her parents in the earthquake, 15-year-old Noura has taken on the role of caretaker for her two younger siblings. They are currently in a tent city with minimal resources. Noura needs emotional and financial support to provide stability for her family."
+    },
+    {
+      image: "/category/SocialWelfare/wc5.jpg",
+      title: "Elias – Philippines",
+      description: "Needs agricultural aid to feed his children after losing everything in a typhoon.",
+      descriptionMax: "Elias, a father of four, lost his farmland and livestock when a typhoon ravaged his village. Now without income, food, or shelter, he struggles to feed his children. Aid would help him restart his agricultural activity and regain his family’s livelihood."
+    }
+  ];
 
+  // بيانات التطوع (Voluntary)
+  const voluntaryItems = [
+    {
+      image: "/voluntary/SocialWelfare/wv1.jpg",
+      title: "Disaster Relief Kits – Indonesia",
+      description: "After a tsunami, disaster relief kits containing food, water, clothing, and hygiene products are distributed to survivors.",
+    },
+    {
+      image: "/voluntary/SocialWelfare/wv2.webp",
+      title: "Emergency Shelter Tents – Philippines",
+      description: "Emergency shelter tents are provided to families whose homes were destroyed by a typhoon. These tents serve as temporary housing until more permanent solutions can be found.",
+    },
+    {
+      image: "/voluntary/SocialWelfare/wv3.webp",
+      title: "Search and Rescue Teams – Turkey",
+      description: "Search and rescue teams, equipped with the necessary tools and training, are sent to earthquake-hit areas to find and rescue survivors trapped under debris.",
+    },
+    {
+      image: "/voluntary/SocialWelfare/wv4.jpg",
+      title: "Psychosocial Support for Disaster Survivors – Japan",
+      description: "After a major earthquake, a psychosocial support program is launched to help survivors deal with grief, trauma, and stress.",
+    },
+    {
+      image: "/voluntary/SocialWelfare/wv5.jpg",
+      title: "Reconstruction Materials – Nepal",
+      description: "Following the devastating earthquake, reconstruction materials like cement, bricks, and steel are provided to communities to rebuild their homes and infrastructure.",
+    }
+  ];
 
   useEffect(() => {
-    
     setDonationType("1");
   }, []);
+
+  const [showToast, setShowToast] = useState(false);
+
+  // تعديل زر التبرع ليظهر التوست عند التأكيد
+  const handleDonationConfirm = () => {
+    // ...أي منطق إضافي لمعالجة التبرع...
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 7000);
+  };
 
   return (
     <>
@@ -79,42 +149,18 @@ const SocialWelfare = () => {
         </div>
       </div>
 
-      {/* Toast */}
-      <div
-        className="our-work-toast position-fixed top-0 end-0 p-0 p-md-3 pt-14 pt-md-15"
-        style={{ zIndex: 5 }}
-      >
-        <div
-          id="toastNotice"
-          className="toast p-5 pt-0 pe-0"
-          role="alert"
-          aria-live="assertive"
-          aria-atomic="true"
-        >
-          <div className="toast-header pb-0">
-            <div className="col">
-              <button
-                type="button"
-                className="btn-close float-end"
-                data-bs-dismiss="toast"
-                aria-label="Close"
-              ></button>
-            </div>
-          </div>
-          <div className="toast-body pt-0">
-            <p id="lblAddToCartMsg" className="col-11"></p>
-            <p
-              className="text-uppercase text-primary fw-medium text-decoration-underline mt-6"
-              role="button"
-              onClick={() =>
-                (window.location.href = "/en/global/donation/checkout")
-              }
-            >
-              VIEW YOUR CART
-            </p>
-          </div>
-        </div>
-      </div>
+      {/* Toast يظهر في الأسفل على اليمين */}
+      <ToastContainer position="bottom-end" className="p-3" style={{ zIndex: 9999 }}>
+        <Toast show={showToast} onClose={() => setShowToast(false)} bg="success" delay={7000} autohide>
+          <Toast.Header>
+            <strong className="me-auto">Donation Sent</strong>
+          </Toast.Header>
+          <Toast.Body className="text-white">
+            Your donation request has been sent.<br />
+            Thank you for your generosity!
+          </Toast.Body>
+        </Toast>
+      </ToastContainer>
 
       {/* Modal */}
       <div
@@ -237,15 +283,12 @@ const SocialWelfare = () => {
                 </div>
               </form>
             </div>
-
             <div className="modal-footer justify-content-between mt-md-15">
               <button
                 type="button"
-                onClick={() => {
-                  console.log('Payment details:', paymentDetails);
-                  // Add your donation processing logic here
-                }}
+                onClick={handleDonationConfirm}
                 className="btn btn-primary"
+                data-bs-dismiss="modal"
               >
                 Confirm Donation
               </button>
@@ -401,13 +444,8 @@ const SocialWelfare = () => {
         </div>
       </section>
 
-     <CaseSpecial/>
-
-
-
-
-
-     <Vacation />
+      <CaseSpecial caseItems={caseItems} />
+      <Vacation items={voluntaryItems} />
 
       <section id="WSP">
         <div className="container">

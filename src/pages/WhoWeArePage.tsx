@@ -39,7 +39,7 @@ const WhoWeAre = () => {
           <div className="col mt-5">
             <p className="col display-5 d-inline-flex fw-medium text-uppercase">Our story</p>
             <p className="col h6 fw-normal text-gray text-uppercase">
-              Doha, Qatar – 1984.
+              Algeria, Telemcen – 2024.
             </p>
           </div>
 

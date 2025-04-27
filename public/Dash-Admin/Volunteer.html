@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <!--start top-->
+            <div class="top">
+                <div class="logo">
+                    <h2>َ<span class="danger">TAKAFUL</span></h2>
+                </div>
+                <div class="close" id="close_btn">
+                    <span class="material-symbols-outlined"> close </span>
+                </div>
+            </div>
+            <!--end top-->
+            <div class="sidebar">
+                <a href="index.html">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    <h3>Dashbord</h3>
+                </a>
+                <a href="Membres.html" >
+                    <span class="material-symbols-outlined">person_outline</span>
+                    <h3>Membres</h3>
+                </a>
+                <a href="Volunteer.html" class="active">
+                    <span class="material-symbols-outlined">volunteer_activism</span>
+                    <h3>Volunteer</h3>
+                </a>
+                <a href="Messages.html">
+                    <span class="material-symbols-outlined">mail_outline</span>
+                    <h3>Messages</h3>
+                    <span class="msg_count">3</span>
+                </a>
+                <a href="News.html">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                    <h3>News</h3>
+                </a>
+                <a href="Events.html">
+                    <span class="material-symbols-outlined">event_available</span>
+                    <h3>Events</h3>
+                </a>
+                <a href="Special_case.html">
+                    <span class="material-symbols-outlined">person_raised_hand</span>
+                    <h3>Special case</h3>
+                </a>
+                <a href="Collabs.html">
+                    <span class="material-symbols-outlined">diversity_3</span>
+                    <h3>Collaborations</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>logout</h3>
+                </a>
+            </div>
+
+        </aside>
+        <main>
+            <h1 style="text-transform: uppercase; font-size: 32px;">Dashbord</h1>
+
+            <div class="date">
+                <input type="date">
+            </div>
+        <!--Start inside-->
+            
+        <!--Star recent Order-->
+    <div class="recent_order">
+        <h1 style="text-transform: uppercase; font-size: 32px;">Volunteer work</h1>
+        <div><br></div>
+        <h2 style="color: #b1005f;font-size: 32px;">Social Walfer</h2>
+        <div><br></div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="font-size: 20px;">Volunteer work name</th>
+                    <th style="font-size: 20px;">Volunteer work id</th>
+                    <th style="font-size: 20px;">status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Disaster Relief Kits Indonesia</td>
+                    <td>vw-sw-01</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Emergency Shelter Tents  Philippines</td>
+                    <td>vw-sw-02</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Search and Rescue Teams  Turkey</td>
+                    <td>vw-sw-03</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Psychosocial Support for Disaster Survivors  Japan</td>
+                    <td>vw-sw-04</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>   
+                <tr>
+                    <td>Emergency hospital palistine</td>
+                    <td>vw-sw-05</td>
+                    <td>
+                        <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Not Yet
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Disaster Relief Kits nippale</td>
+                    <td>vw-sw-06</td>
+                    <td>
+                        <button style="background-color: rgb(255, 123, 0) ; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Denied
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Search and Rescue Teams Moroco</td>
+                    <td>vw-sw-7</td>
+                    <td>
+                        <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Not Yet
+                        </button>
+                    </td>
+                    <td>
+                        <butto onclick="confirmDelete()" n style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Psychosocial Support for Disaster Survivors  India</td>
+                    <td>vw-sw-08</td>
+                    <td>
+                        <button style="background-color: rgb(255, 123, 0); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Denied
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                   
+                    <td></td>
+
+                    <td ><a href="Forme/vacation.html" style="background-color: #b1005f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px;">Add Volunteer work</a></td>
+                    <td ></td>
+                    
+                    
+                </tr>
+                
+            </tbody>
+        </table>
+        
+
+        <div><br></div>
+        <h2 style="color: #b1005f;font-size: 32px;">Water Sanitation and Hygine</h2>
+        <div><br></div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="font-size: 20px;">Volunteer work name</th>
+                    <th style="font-size: 20px;">Volunteer work id</th>
+                    <th style="font-size: 20px;">status</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>Water Purification Kits  Chad</td>
+                    <td>vw-wsh-01</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Portable Toilets  Somalia</td>
+                    <td>vw-wsh-02</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <butto onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>   
+                <tr>
+                    <td>Handwashing Stations  Yemen</td>
+                    <td>vw-wsh-03</td>
+                    <td>
+                        <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Not Yet
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hygiene Training  Mali</td>
+                    <td>vw-wsh-04</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Water Storage Tanks  Niger</td>
+                    <td>vw-wsh-05</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Water Purification Kits  Mali</td>
+                    <td>vw-wsh-06</td>
+                    <td>
+                        <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Not Yet
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Handwashing Stations syria</td>
+                    <td>vw-wsh-07</td>
+                    <td>
+                        <button style="background-color: rgb(255, 123, 0); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Denied
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Portable Toilets Zambia</td>
+                    <td>vw-wsh-08</td>
+                    <td>
+                        <button style="background-color: rgb(255, 123, 0) ; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Denied
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+
+                    <td ><a href="Forme/vacation.html" style="background-color: #b1005f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px;">Add Volunteer work</a></td>
+                    <td ></td>
+                    
+                </tr>
+                
+            </tbody>
+        </table>
+        
+        <div><br></div>
+        <h2 style="color: #b1005f;font-size: 32px;">Health</h2>
+        <div><br></div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="font-size: 20px;">Volunteer work name</th>
+                    <th style="font-size: 20px;">Volunteer work id</th>
+                    <th style="font-size: 20px;">status</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>Mobile Health Clinics  Gaza</td>
+                    <td>vw-h-01</td>
+                    <td>
+                        <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Not Yet
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Medical Supplies  Syria</td>
+                    <td>vw-h-02</td>
+                    <td>
+                        <button style="background-color: rgb(255, 123, 0) ; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Denied
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mental Health Support  Afghanistan</td>
+                    <td>vw-h-03</td>
+                    <td>
+                        <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Not Yet
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Emergency Vaccination Campaign  South Sudan</td>
+                    <td>vw-h-04</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Medical Training for Community Health Workers Congo</td>
+                    <td>vw-h-05</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Medical Supplies  Yamen</td>
+                    <td>vw-h-06</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mobile Health Clinics Lebanon</td>
+                    <td>vw-h-07</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr> 
+                <tr>
+                    <td>Mental Health Support  Chad</td>
+                    <td>vw-h-08</td>
+                    <td>
+                        <button style="background-color: rgb(255, 123, 0); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Denied
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+
+                    <td ><a href="Forme/vacation.html" style="background-color: #b1005f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px;">Add Volunteer work</a></td>
+                    <td ></td>
+                    
+                </tr>
+                
+            </tbody>
+        </table>
+    
+        <div><br></div>
+        <h2 style="color: #b1005f;font-size: 32px;">Social Housing</h2>
+        <div><br></div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="font-size: 20px;">Volunteer work name</th>
+                    <th style="font-size: 20px;">Volunteer work id</th>
+                    <th style="font-size: 20px;">status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Temporary Shelters  Lebanon</td>
+                    <td>vw-sh-01</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Roof Repair Kits  Tunisia</td>
+                    <td>vw-sh-02</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Home Renovation Program  Haiti</td>
+                    <td>vw-sh-03</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>   
+                <tr>
+                    <td>Legal Aid for Evicted Families  Ecuador</td>
+                    <td>vw-sh-04</td>
+                    <td>
+                        <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Not Yet
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>roof Repair Kits  congo</td>
+                    <td>vw-sh-05</td>
+                    <td>
+                        <button style="background-color: rgb(255, 123, 0) ; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Denied
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Home Renovation Program Moroco</td>
+                    <td>vw-sh-06</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Temporary Shelters Niger</td>
+                    <td>vw-sh-07</td>
+                    <td>
+                        <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Not Yet
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Legal Aid for Evicted Families Mali</td>
+                    <td>vw-sh-08</td>
+                    <td>
+                        <button style="background-color: rgb(255, 123, 0); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Denied
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+
+                    <td ><a href="Forme/vacation.html" style="background-color: #b1005f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px;">Add Volunteer work</a></td>
+                    <td ></td>
+                    
+                </tr>
+                
+            </tbody>
+        </table>
+        
+        <div><br></div>
+        <h2 style="color: #b1005f;font-size: 32px;">Education</h2>
+        <div><br></div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="font-size: 20px;">Volunteer work name</th>
+                    <th style="font-size: 20px;">Volunteer work id</th>
+                    <th style="font-size: 20px;">status</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>Donation of School Bags</td>
+                    <td>vw-e-01</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>New Desks and Chairs</td>
+                    <td>vw-e-02</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>   
+                <tr>
+                    <td>.Free Tutoring for High School Students</td>
+                    <td>vw-e-03</td>
+                    <td>
+                        <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Not Yet
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Support for Remote Middle School Students</td>
+                    <td>vw-e-04</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Digital Tablets for Remote Learning</td>
+                    <td>vw-e-05</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()"  style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>New Desks and Chairs</td>
+                    <td>vw-e-06</td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: rgb(255, 123, 0) ; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Denied
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Donation of School Bags</td>
+                    <td>vw-e-07</td>
+                    <td>
+                        <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Not Yet
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Support for Remote Middle School Students</td>
+                    <td>vw-e-08</td>
+                    <td>
+                        <button style="background-color: rgb(255, 123, 0); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Denied
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+
+                    <td ><a href="Forme/vacation.html" style="background-color: #b1005f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px;">Add Volunteer work</a></td>
+                    <td ></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        
+        <div><br></div>
+        <h2 style="color: #b1005f;font-size: 32px;">Social cohesion</h2>
+        <div><br></div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="font-size: 20px;">Volunteer work name</th>
+                    <th style="font-size: 20px;">Volunteer work id</th>
+                    <th style="font-size: 20px;">status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Wheelchair Distribution</td>
+                    <td>vw-sc-01</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Winter Clothes Distribution</td>
+                    <td>vw-sc-02</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Orphan Sponsorship</td>
+                    <td>vw-sc-03</td>
+                    <td>
+                        <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Scholarships for Students</td>
+                    <td>vw-sc-04</td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: rgb(255, 123, 0); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Denied
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Toy Distribution for Orphans</td>
+                    <td>vw-sc-05</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>   
+                <tr>
+                    <td>Orphan Sponsorship</td>
+                    <td>vw-sc-06</td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Not Yet
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Social Walfer</td>
+                    <td>vw-sc-07</td>
+                    <td>
+                        <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+
+                    <td ><a href="Forme/vacation.html" style="background-color: #b1005f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px;">Add Volunteer work</a></td>
+                    <td ></td>
+                    
+                </tr>
+                
+            </tbody>
+        </table>
+    
+        <div><br></div>
+        <h2 style="color: #b1005f;font-size: 32px;">Economic Empowerment</h2>
+        <div><br></div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="font-size: 20px;">Volunteer work name</th>
+                    <th style="font-size: 20px;">Volunteer work id</th>
+                    <th style="font-size: 20px;">status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Funding for Small Projects</td>
+                    <td>vw-ee-01</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Support for Vocational Training</td>
+                    <td>vw-ee-02</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Funding for Girls' Education</td>
+                    <td>vw-ee-03</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Support for Agricultural Projects</td>
+                    <td>vw-ee-04</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>   
+                <tr>
+                    <td>Support for Young Entrepreneurs</td>
+                    <td>vw-ee-05</td>
+                    <td>
+                        <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Not Yet
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Funding for  poor Boys' Education</td>
+                    <td>vw-ee-06</td>
+                    <td>
+                        <button style="background-color: rgb(255, 123, 0) ; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Denied
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Support for Vocational Training</td>
+                    <td>vw-ee-07</td>
+                    <td>
+                        <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Not Yet
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Support Startup Projects</td>
+                    <td>vw-ee-08</td>
+                    <td>
+                        <button style="background-color: rgb(255, 123, 0); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Denied
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+
+                    <td ><a href="Forme/vacation.html" style="background-color: #b1005f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px;">Add Volunteer work</a></td>
+                    <td ></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        
+        
+        <div><br></div>
+        <h2 style="color: #b1005f;font-size: 32px;">Food Security</h2>
+        <div><br></div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="font-size: 20px;">Volunteer work name</th>
+                    <th style="font-size: 20px;">Volunteer work id</th>
+                    <th style="font-size: 20px;">status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Food Parcel Distribution</td>
+                    <td>vw-fs-01</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Seeds and Tools Donation</td>
+                    <td>vw-fs-02</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ramadan Meal Bags</td>
+                    <td>vw-fs-03</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Food Parcels for Displaced Families</td>
+                    <td>vw-fs-04</td>
+                    <td>
+                        <button style="background-color: rgb(70, 180, 6); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Active
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>   
+                <tr>
+                    <td>Support for Charitable Bakeries</td>
+                    <td>vw-fs-05</td>
+                    <td>
+                        <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Not Yet
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Seeds and Tools Donation</td>
+                    <td>vw-fs-06</td>
+                    <td>
+                        <button style="background-color: rgb(255, 123, 0) ; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Denied
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Food Parcels for Displaced Families</td>
+                    <td>vw-fs-07</td>
+                    <td>
+                        <button style="background-color: yellow; color: black; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Not Yet
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Food Parcel Distribution</td>
+                    <td>vw-fs-08</td>
+                    <td>
+                        <button style="background-color: rgb(255, 123, 0); color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Denied
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="confirmDelete()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px;">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+
+                    <td ><a href="Forme/vacation.html" style="background-color: #b1005f; color: white; padding: 8px 16px; text-decoration: none; border-radius: 5px;">Add Volunteer work</a></td>
+                    <td ></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        
+        
+        
+    </div>
+
+        <!--End recent Order-->
+</main>
+        <div class="right">
+            <!--Start TOP-->
+        <div class="top">
+            <button id="menu_bar">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <div class="theme_toggler">
+                <span class="material-symbols-outlined active">light_mode</span>
+                <span class="material-symbols-outlined">dark_mode</span>
+            </div>
+            <div class="profile">
+                <div class="info">
+                    <p><b>Rayene</b></p>
+                    <p>Admine</p>
+                    <small class="text-muted"></small>
+                </div>
+                <div class="profile-photo">
+                    <img src="img/img1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        function confirmDelete() {
+            Swal.fire({
+                title: 'Are You Sure ?',
+                text: "This Action Wil Delate The Volunteer Work !.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Validate',
+                cancelButtonText: 'Cancel',
+                confirmButtonColor: '#008000',
+                cancelButtonColor: '#FF0000'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Delated !',
+                        text: 'The Volunteer Work Has Been Successfully Delated .',
+                        icon: 'success',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#008000'
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>

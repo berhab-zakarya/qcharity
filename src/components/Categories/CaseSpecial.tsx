@@ -1,71 +1,46 @@
-import  { useRef } from 'react';
+import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './CaseSpecial.css';
 
-const CaseSpecial = () => {
+type CaseItem = {
+  image: string;
+  title: string;
+  description: string;
+  descriptionMax: string;
+  link?: string;
+};
+
+type CaseSpecialProps = {
+  caseItems: CaseItem[];
+};
+
+const CaseSpecial = ({ caseItems }: CaseSpecialProps) => {
   const navigate = useNavigate();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  
+
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
       const scrollAmount = 320;
-      const newScrollPosition = scrollContainerRef.current.scrollLeft + 
+      const newScrollPosition =
+        scrollContainerRef.current.scrollLeft +
         (direction === 'left' ? -scrollAmount : scrollAmount);
-      
+
       scrollContainerRef.current.scrollTo({
         left: newScrollPosition,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   };
 
-  const handleReadMore = (item: any) => {
-    navigate('/case', { 
+  const handleReadMore = (item: CaseItem) => {
+    navigate('/case', {
       state: {
         imageUrl: item.image,
         title: item.title,
-        description: item.descriptionMax
-      }
+        description: item.descriptionMax,
+      },
     });
   };
-
-  const caseItems = [
-    {
-      image: "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
-      title: "Urgent Medical Aid",
-      description: "Supporting critical healthcare needs for families in crisis",
-      descriptionMax: "Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis .",
-      link: "/cases/medical-aid",
-    },
-    {
-      image: "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
-      title: "Food Security",
-      description: "Providing essential nutrition to vulnerable communities",
-      descriptionMax: "Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis .",
-      link: "/cases/food-security",
-    },
-    {
-      image: "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
-      title: "Education Support",
-      description: "Enabling access to quality education for children",
-      descriptionMax: "Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis .",
-      link: "/cases/education",
-    },
-    {
-      image: "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
-      title: "Shelter Assistance",
-      description: "Building safe homes for displaced families",
-      descriptionMax: "Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis .",
-      link: "/cases/shelter",
-    },
-    {
-      image: "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
-      title: "Water Projects",
-      description: "Delivering clean water to communities in need",
-      descriptionMax: "Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis Supporting critical healthcare needs for families in crisis .",
-      link: "/cases/water",
-    },
-  ];
 
   const buttonStyle = {
     width: '45px',
@@ -73,7 +48,7 @@ const CaseSpecial = () => {
     border: 'none',
     backgroundColor: 'rgba(255, 255, 255, 0.9)',
     boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-    transition: 'all 0.3s ease'
+    transition: 'all 0.3s ease',
   };
 
   return (
@@ -101,9 +76,9 @@ const CaseSpecial = () => {
           </button>
 
           {/* Scrollable container */}
-          <div 
+          <div
             ref={scrollContainerRef}
-            className="cases-scroll-container" 
+            className="cases-scroll-container"
           >
             <div className="cases-wrapper">
               {caseItems.map((item, index) => (
@@ -119,7 +94,7 @@ const CaseSpecial = () => {
                   <div className="p-4 bg-white">
                     <h5 className="fw-bold mb-2">{item.title}</h5>
                     <p className="text-gray mb-4 small">{item.description}</p>
-                    <button 
+                    <button
                       className="btn btn-outline-primary"
                       onClick={() => handleReadMore(item)}
                     >

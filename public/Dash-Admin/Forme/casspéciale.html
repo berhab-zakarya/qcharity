@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulaire cas-spéciale</title>
+  <link rel="stylesheet" href="lestyle.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Section image -->
+    <div class="image-section">
+      <img src="logoeltakaful.jpg" alt="Illustration" />
+    </div>
+
+    <!-- Section formulaire -->
+    <div class="login-box">
+      <h2>Speciale-case</h2>
+      <form action="#" method="post" enctype="multipart/form-data">
+
+        <div class="user-box">
+          <input type="text" name="nom" required pattern="[A-Za-zÀ-ÿ\s\-]+" title="Veuillez entrer uniquement des lettres." />
+          <label>First name</label>
+        </div>
+
+        <div class="user-box">
+          <input type="text" name="prenom" required pattern="[A-Za-zÀ-ÿ\s\-]+" title="Veuillez entrer uniquement des lettres." />
+          <label>Last name</label>
+        </div>
+
+        <div class="user-box">
+          <input type="email" name="email" required pattern="^[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$" title="Veuillez entrer un email valide." />
+          <label>Email</label>
+        </div>
+
+        <div class="user-box">
+          <input type="tel" name="telephone" required pattern="^\+\d{1,3}\d{9}$" title="Format requis : +indicatifpays suivi de 9-10 chiffres. Exemple : +213123456789" />
+          <label>Phone [+XXX XXXXXXXXX]</label>
+        </div>
+
+        <div class="user-box">
+          <textarea name="adresse" required></textarea>
+          <label>Adresse</label>
+        </div>
+
+        <div class="user-box">
+          <input type="text" name="numero" required maxlength="10" pattern="\d{1,20}" title="Jusqu'à 20 chiffres" />
+          <label>Number CCP / Carte bancaire</label>
+        </div>
+
+        <div class="user-box">
+          <input type="password" name="code" required maxlength="5" pattern="\d{5}" title="Code à 5 chiffres" />
+          <label>Code CCP / Carte bancaire</label>
+        </div>
+
+        <div class="user-box">
+          <textarea name="description" required></textarea>
+          <label>Description</label>
+        </div>
+
+        <div class="user-box">
+          <input type="file" name="images[]" multiple accept="image/*" required />
+          <label style="top: -20px;">Add images</label>
+        </div>
+
+        <button type="button" onclick="confirmDelete()"class="animated-btn">
+          <span></span><span></span><span></span><span></span>
+          SUBMIT
+        </button>
+      </form>
+    </div>
+  </div>
+  <script>
+    function confirmDelete() {
+        Swal.fire({
+            title: 'Confirme The Submission ?',
+            text: "Would You Like To Validate Or Edit Your Information ?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Valider',
+            cancelButtonText: 'Modify',
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: 'Success !',
+                    text: 'Your Informations has been successfully submitted.',
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#3085d6'
+                }).then(() => {
+                    // 🔁 Redirection après confirmation
+                    window.location.href = '../Special_case.html';
+                });
+            }
+        });
+    }
+</script>
+</body>
+</html>

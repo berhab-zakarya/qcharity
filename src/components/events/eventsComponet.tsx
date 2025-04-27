@@ -20,40 +20,53 @@ const EventsComponent = () => {
   const events = [
     {
       id: 'event1',
-      title: 'Humanitarian Aid Distribution',
-      description: 'Distribution of essential supplies and aid packages to affected communities.',
-      descriptionMax: 'Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities.',
-      image: '/images/banners/gaza-banner.webp',
-      date: '2025-05-01',
-      location: 'Gaza Strip'
+      title: 'Social Housing',
+      description: '“Habitat for Humanity: Beirut Response” (Lebanon, 2020–2021)',
+      descriptionMax: 'Following the Beirut port explosion, Habitat for Humanity launched a large-scale reconstruction program to support affected families. More than 1,000 damaged homes were repaired thanks to donations and the help of local volunteers. This project restored safe shelter for thousands of vulnerable people.',
+      image: '/events/E1.jpg',
+      date: '2020–2021',
+      location: 'Lebanon',
+      tag: '#SocialHousing #HabitatForHumanity #Reconstruction #Beirut'
     },
     {
       id: 'event2',
-      title: 'Clean Water Project Launch',
-      description: 'Inauguration of new water purification facilities in rural communities.',
-      descriptionMax: 'Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities.',
-      image: '/images/banners/gaza-banner.webp',
-      date: '2025-05-15',
-      location: 'Yemen'
+      title: 'Health',
+      description: '“Médecins Sans Frontières Emergency Clinic” (Sudan, 2023)',
+      descriptionMax: 'In 2023, MSF set up a mobile clinic in western Sudan to respond to the growing number of internally displaced people. Thanks to donations, thousands of consultations were provided, including for pregnant women and children suffering from malnutrition. Services included vaccinations, emergency care, and psychological support.',
+      image: '/events/E2.webp',
+      date: '2023',
+      location: 'Sudan',
+      tag: '#Health #MSF #MobileClinic #EmergencyCare'
     },
     {
       id: 'event3',
-      title: 'Education Support Program',
-      description: 'Providing educational materials and support to underprivileged students.',
-      descriptionMax: 'Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities.',
-  
-      image: '/images/banners/gaza-banner.webp',
-      date: '2025-05-20',
-      location: 'Lebanon'
+      title: 'Water, Sanitation, and Hygiene',
+      description: '“UNICEF WASH Program in Yemen” (2022)',
+      descriptionMax: 'In response to the humanitarian crisis in Yemen, UNICEF installed over 400 water points and rehabilitated sanitation systems in rural areas. The project also distributed hygiene kits to more than 100,000 families and ran public awareness campaigns about essential hygiene practices.',
+      image: '/events/E3.jpg',
+      date: '2022',
+      location: 'Yemen',
+      tag: '#WASH #UNICEF #CleanWaterAccess #Yemen'
     },
     {
       id: 'event4',
-      title: 'Medical Camp',
-      description: 'Free medical checkups and healthcare services for vulnerable communities.',
-      descriptionMax: 'Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities Distribution of essential supplies and aid packages to affected communities.',
-      image: '/images/banners/gaza-banner.webp',
-      date: '2025-06-01',
-      location: 'Syria'
+      title: 'Education',
+      description: '“Back to School in Syria” by Save the Children (2021)',
+      descriptionMax: 'After years of conflict, Save the Children launched a school reintegration program for displaced children in Syria. The initiative rebuilt 50 schools, trained teachers, and provided learning materials to more than 20,000 children. The project was funded through donations from individuals and supporting businesses.',
+      image: '/events/E4.png',
+      date: '2021',
+      location: 'Syria',
+      tag: '#Education #SaveTheChildren #EducationForAll #Syria'
+    },
+    {
+      id: 'event5',
+      title: 'Social Engagement',
+      description: '“World Cleanup Day” (Global, 2023)',
+      descriptionMax: 'On September 16, 2023, millions of volunteers across 191 countries participated in World Cleanup Day. In just one day, over 80,000 tons of waste were collected from streets, forests, rivers, and beaches. This initiative united citizens, schools, and companies around a shared goal: a cleaner planet.',
+      image: '/events/E5.jpg',
+      date: '2023-09-16',
+      location: 'Global',
+      tag: '#SocialEngagement #WorldCleanupDay #EcoCitizenship #GlobalAction'
     }
   ];
 

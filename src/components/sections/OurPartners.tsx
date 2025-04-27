@@ -1,11 +1,12 @@
 "use client"
 
 import { useState } from "react";
-import { Modal, Form, Button } from 'react-bootstrap';
+import { Modal, Form, Button, Toast, ToastContainer } from 'react-bootstrap';
 
 const OurPartners = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const [showAlert, setShowAlert] = useState(false); // New state for alert
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -53,6 +54,8 @@ const OurPartners = () => {
     // Handle form submission logic here
     console.log(formData);
     setShowModal(false);
+    setShowAlert(true); // Show alert after submit
+    setTimeout(() => setShowAlert(false), 7000); // Hide alert after 7 seconds
   };
 
   return (
@@ -156,8 +159,8 @@ const OurPartners = () => {
             </div>
           </div>
         </div>
-        
-        <div className="row mt-5">
+
+        <div className="row mt-5 position-relative">
           <div className="col-12 text-center">
             <button 
               className="btn btn-primary btn-lg rounded-pill px-4 py-2 shadow-sm"
@@ -170,6 +173,30 @@ const OurPartners = () => {
             >
               Cooperate with Us
             </button>
+            {/* Toast appears just below the button */}
+            <div style={{ position: "relative", width: "100%", minHeight: "60px" }}>
+              <ToastContainer
+                position="bottom-center"
+                className="p-3"
+                style={{
+                  position: "absolute",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  bottom: "-10px",
+                  zIndex: 9999
+                }}
+              >
+                <Toast show={showAlert} onClose={() => setShowAlert(false)} bg="success" delay={7000} autohide>
+                  <Toast.Header>
+                    <strong className="me-auto">Request Sent</strong>
+                  </Toast.Header>
+                  <Toast.Body className="text-white">
+                    Your cooperation request has been sent to the admin department.<br />
+                    Your request will be reviewed and you will be contacted soon.
+                  </Toast.Body>
+                </Toast>
+              </ToastContainer>
+            </div>
           </div>
         </div>
 

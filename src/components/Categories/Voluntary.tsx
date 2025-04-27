@@ -1,12 +1,23 @@
-import  { useState, useRef } from "react";
+import { useState, useRef } from "react";
 
-const Voluntary = () => {
+type VoluntaryItem = {
+  image: string;
+  title: string;
+  description: string;
+  link?: string;
+};
+
+type VoluntaryProps = {
+  items: VoluntaryItem[];
+};
+
+const Voluntary = ({ items }: VoluntaryProps) => {
   const [activeQR, setActiveQR] = useState<number | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
-      const scrollAmount = 300; // Width of one card
+      const scrollAmount = 300;
       const currentScroll = scrollContainerRef.current.scrollLeft;
       const newScroll =
         direction === "left"
@@ -44,7 +55,7 @@ const Voluntary = () => {
               overflowX: "auto",
               overflowY: "hidden",
               margin: "0 -20px",
-              padding: "0 40px", // زيادة المسافة للأزرار
+              padding: "0 40px",
               WebkitOverflowScrolling: "touch",
               msOverflowStyle: "none",
               scrollbarWidth: "none",
@@ -53,43 +64,7 @@ const Voluntary = () => {
             }}
           >
             <div className="d-flex flex-nowrap gap-4">
-              {[
-                {
-                  image:
-                    "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
-                  title: "Urgent Medical Aid",
-                  description: "Help provide essential medical care and support to those in need. Join our medical assistance programs and make a difference in people's lives.",
-                  link: "/cases/medical-aid",
-                },
-                {
-                  image:
-                    "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
-                  title: "Food Security",
-                  description: "Support our food distribution initiatives and help combat hunger. Work with us to ensure families have access to nutritious meals.",
-                  link: "/cases/food-security",
-                },
-                {
-                  image:
-                    "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
-                  title: "Education Support",
-                  description: "Volunteer to help children access quality education. Participate in teaching, mentoring, and educational resource distribution.",
-                  link: "/cases/education",
-                },
-                {
-                  image:
-                    "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
-                  title: "Shelter Assistance",
-                  description: "Join our efforts to provide safe housing solutions. Help build and maintain shelters for displaced families and communities.",
-                  link: "/cases/shelter",
-                },
-                {
-                  image:
-                    "/content/QCGlobal/images/Humanitarianassistance-M-left.jpg",
-                  title: "Water Projects",
-                  description: "Support clean water initiatives and help communities access safe drinking water. Participate in well-building and water distribution projects.",
-                  link: "/cases/water",
-                },
-              ].map((item, index) => (
+              {items.map((item, index) => (
                 <div
                   key={index}
                   style={{

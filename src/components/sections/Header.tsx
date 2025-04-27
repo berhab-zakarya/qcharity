@@ -35,14 +35,6 @@ const Header = () => {
             />
             <span>Free Palestine</span>
           </a>
-          <a
-            href="/covidinternational"
-            className="btn btn-orange rounded-pill px-2 py-2 ms-4 ms-sm-7"
-          >
-            <small>
-              More <span className="d-none d-md-inline">information</span>
-            </small>
-          </a>
         </div>
       </div>
 
@@ -55,23 +47,26 @@ const Header = () => {
 
         {/* Brand Logo */}
         <div className="h-100 bg-light" style={{ width: "1px" }}></div>
-      
-<a className="navbar-brand py-6 mb-0 h1 bg-white ml-10 px-10" href="/">
-  <div className="mx-auto" style={{width: "50px", height: "50px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
-    <span style={{color: "#8c1d40", fontWeight: "bold", fontSize: "16px"}}>Takaful</span>
-    <span style={{color: "#8c1d40", fontWeight: "bold", fontSize: "16px"}}>تكافل</span>
-  </div>
-</a>
+
+        <a className="navbar-brand py-6 mb-0 h1 bg-white ml-10 px-10" href="/">
+          <img
+            src="/logo.svg"
+            alt="Logo"
+            className="d-inline-block align-text-top"
+            width={50}
+            height={50}
+          />
+        </a>
 
         {/* Navigation Items */}
         <ul className="navbar-nav navbar-nav-2 mb-0 fw-medium align-items-center flex-row ms-auto">
-          <li
-            className="nav-item h-100 bg-light d-none d-xl-block"
+         
+        <li
+            className="nav-item h-100 bg-light d-none d-md-block"
             style={{ width: "1px" }}
           ></li>
-
-          <li className="nav-item d-none d-xl-block">
-            <a className="nav-link" href="/">
+          <li className="nav-item d-none d-xl-block ">
+            <a className="nav-link text-uppercase" href="/">
               Home
             </a>
           </li>
@@ -82,9 +77,9 @@ const Header = () => {
           ></li>
 
           {/* Currency Dropdown */}
-          <li className="nav-item dropdown d-none d-md-block">
+          <li className="nav-item  d-none d-md-block">
             <a
-              className="nav-link dropdown-toggle text-uppercase"
+              className="nav-link text-uppercase"
               href="/reach-us"
             >
               Contact Us
@@ -97,8 +92,17 @@ const Header = () => {
             style={{ width: "1px" }}
           ></li>
           <li className="nav-item d-none d-md-flex">
-            <a className="nav-link px-3" href="/who-we-are">
+            <a className="nav-link px-3 text-uppercase" href="/who-we-are">
               About Us
+            </a>
+          </li>
+          <li
+            className="nav-item h-100 bg-light d-none d-md-block"
+            style={{ width: "1px" }}
+          ></li>
+          <li className="nav-item d-none d-md-flex">
+            <a className="nav-link px-3 text-uppercase" href="/who-we-are">
+              Profile
             </a>
           </li>
           <li className="profilemenumobile nav-item d-block d-md-none ml-4">

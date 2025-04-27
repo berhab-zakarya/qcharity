@@ -11,13 +11,13 @@ export default function LoginComponent() {
 
     // Check for admin credentials
     if (userInput === "admin@gmail.com" && password === "admin123") {
-      navigate("/admin"); // Navigate to admin dashboard
+       window.location.href = "/Dash-Admin/index.html";
       return;
     }
 
     // Check for regular user credentials
-    if (userInput === "user@gmail.com" && password === "usertest123") {
-      navigate("/");
+    if (userInput === "boumediniahmad@mail.com" && password === "usertest123") {
+      window.location.href = "/Dash-Admin/Profile/index.html";
       return;
     }
 
