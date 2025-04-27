@@ -19,31 +19,31 @@ function FoodSecurity() {
   // بيانات الحالات الخاصة (Case Special)
   const caseItems = [
     {
-      image: "/category/food_security cas1.jpg",
+      image: "/category/food_security_cas1.jpg",
       title: "Farming Family in Off-Harvest Crisis",
       description: "A farming family faces food shortages and needs aid and agricultural support.",
       descriptionMax: "A poor family in a remote village struggles with food shortages during the off-harvest season. They need regular food aid, seeds, and agricultural support to improve self-sufficiency."
     },
     {
-      image: "/category/food_security cas2.jpg",
+      image: "/category/food_security_cas2.jpg",
       title: "Elderly People Isolated Without Food Resources",
       description: "Elderly couple in poverty needs regular food, prepared meals, and healthcare support.",
       descriptionMax: "An elderly couple in a poor neighborhood suffers from limited diet and health issues, relying on occasional charity. They need regular food deliveries, prepared meals, and healthcare support."
     },
     {
-      image: "/category/food_security cas3.jpg",
+      image: "/category/food_security_cas3.jpg",
       title: "Day Laborers Family Impacted by Health Crisis",
       description: "A family of five faces income loss, relying on aid for food, supplies, and income training.",
       descriptionMax: "A family of five faces reduced income due to the health crisis and struggles to meet basic food needs. They rely on community aid and need emergency food, school supplies for the children, and income-generating training."
     },
     {
-      image: "/category/food_security cas4.jpg",
+      image: "/category/food_security_cas4.jpg",
       title: "Internally Displaced Persons Camp",
       description: "Provision of food supplies to displaced families.",
       descriptionMax: "A group of families displaced due to conflict lives in a refugee camp where conditions are harsh. The residents of the camp lack access to basic services (schools, hospitals, etc.), and the greatest challenge they face is the lack of food. They rely on temporary food donations to survive."
     },
     {
-      image: "/category/food_security cas5.jpg",
+      image: "/category/food_security_cas5.jpg",
       title: "Food-Insecure Students",
       description: "Food aid for university students facing financial difficulties to cover their essential needs.",
       descriptionMax: "Students living in a large city, far from their families, face significant financial difficulties. Between tuition fees, rent, and daily expenses, the available resources do not allow them to eat healthily and maintain a balanced diet. They often consume low-nutrient meals due to a lack of means."

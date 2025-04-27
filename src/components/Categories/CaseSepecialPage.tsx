@@ -16,6 +16,8 @@ const CaseSpecialPage = () => {
     amount: ''
   });
 
+  console.log("Payment Details:", imageUrl);
+
   // Add donation type state
   const [donationType, setDonationType] = useState("1"); // "1" for one-time, "2" for monthly
   const [showToast, setShowToast] = useState(false);
@@ -40,7 +42,7 @@ const CaseSpecialPage = () => {
             <div 
               className="h-100"
               style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${imageUrl})`,
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${imageUrl|| "/logo.svg"})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}

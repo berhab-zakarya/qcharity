@@ -148,7 +148,7 @@ function QatarCharityCleanWater() {
         </ToastContainer>
 
         {/* Donation Modal */}
-        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div className="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
             <div className="modal-content">
               <div className="modal-header">

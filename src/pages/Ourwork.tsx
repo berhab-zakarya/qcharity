@@ -42,13 +42,13 @@ const SocialWelfare = () => {
       descriptionMax: "Joseph’s entire neighborhood was reduced to rubble. He spends his nights sleeping outdoors and his days searching for food. With no shelter and aftershocks continuing, he urgently needs help with housing, food, and rebuilding efforts."
     },
     {
-      image: "/category/SocialWelfare/wc4.jpg",
+      image: "/category/SocialWelfare/wv4.jpg",
       title: "Noura – Turkey",
       description: "Needs emotional and financial support to care for her siblings after the quake.",
       descriptionMax: "After losing her parents in the earthquake, 15-year-old Noura has taken on the role of caretaker for her two younger siblings. They are currently in a tent city with minimal resources. Noura needs emotional and financial support to provide stability for her family."
     },
     {
-      image: "/category/SocialWelfare/wc5.jpg",
+      image: "/category/SocialWelfare/wv5.jpg",
       title: "Elias – Philippines",
       description: "Needs agricultural aid to feed his children after losing everything in a typhoon.",
       descriptionMax: "Elias, a father of four, lost his farmland and livestock when a typhoon ravaged his village. Now without income, food, or shelter, he struggles to feed his children. Aid would help him restart his agricultural activity and regain his family’s livelihood."
@@ -308,7 +308,7 @@ const SocialWelfare = () => {
         <div className="container mb-13">
           <div className="row mt-6 justify-content-between">
             <div className="col-xl-3 col-sm-12">
-              <img alt="" className="pb-7" src="/Challeng-Icon.svg" />
+              <img alt="" className="pb-7" src="../../../content/QCGlobal/images/Challeng-Icon.svg" />
               <p>Challenges</p>
             </div>
 

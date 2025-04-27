@@ -22,31 +22,31 @@ const QatarCharityHealthComponent = () => {
   // بيانات الحالات الخاصة (Case Special)
   const caseItems = [
     {
-      image: "/category/ch1.avif",
+      image: "/category/health/ch1.avif",
       title: "Omar – Gaza",
       description: "Needs life-saving heart surgery he cannot afford",
       descriptionMax: "Omar was born with a congenital heart defect that requires urgent surgery. Living in a conflict zone, his family cannot afford the travel or hospital costs. Each day without treatment brings more risk to his young life. With help, he could receive the lifesaving operation he needs."
     },
     {
-      image: "/category/ch2.jpg",
+      image: "/category/health/ch2.png",
       title: "Salma – Syria",
       description: "Urgently needs consistent access to insulin for diabetes treatment.",
       descriptionMax: "Salma is a 45-year-old mother displaced by war. She has suffered from diabetes for years but lost access to her medication when her town was destroyed. Without insulin, her health is rapidly deteriorating. She is in urgent need of medical support and consistent access to treatment."
     },
     {
-      image: "/category/ch3.jpg",
+      image: "/category/health/ch3.png",
       title: "Yassine – Algeria",
       description: "Requires spinal surgery to walk again and avoid financial ruin",
       descriptionMax: "Yassine, a hardworking taxi driver, was severely injured in a traffic accident. With no social coverage or savings, he cannot afford the spinal surgery that could help him walk again. His family now faces financial ruin, and Yassine’s only hope lies in receiving charitable medical assistance."
     },
     {
-      image: "/category/ch4.jpg",
+      image: "/category/health/ch4.jpg",
       title: "Lina – Afghanistan",
       description: "Needs medical care and nutrition to recover from malnutrition",
       descriptionMax: "Six-year-old Lina suffers from chronic malnutrition and respiratory problems. Her displaced family lives in a makeshift shelter with no heating or access to nutritious food. She needs pediatric care, medication, and proper nutrition to regain her health and enjoy a normal childhood."
     },
     {
-      image: "/category/cs5.jpg",
+      image: "/category/health/cs5.jpg",
       title: "Doumbia Twins – Ivory Coast",
       description: "Need neonatal equipment to survive after premature birth.",
       descriptionMax: "Born prematurely in a rural clinic, the Doumbia twins require constant neonatal care. Sadly, the local facility lacks incubators and oxygen. Their mother, already overwhelmed, cannot afford private care. Support is urgently needed to provide them with the essential medical equipment to survive."
@@ -142,7 +142,7 @@ const QatarCharityHealthComponent = () => {
       </ToastContainer>
 
       {/* Modal */}
-      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
           <div className="modal-content">
             <div className="modal-header">

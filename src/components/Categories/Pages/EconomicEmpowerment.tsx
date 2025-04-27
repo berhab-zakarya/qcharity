@@ -20,31 +20,32 @@ const EconomicEmpowerment = () => {
   // بيانات الحالات الخاصة
   const caseItems = [
     {
-      image: "/category/economic_empowerment cas1.jpg",
+      
+      image: "/category/economic_empowerment_cas1.jpg",
       title: "A divorced woman from a rural area",
       description: "A divorced woman from a rural area needs support to improve her economic situation.",
       descriptionMax: "A divorced woman from a rural area struggles with limited job opportunities and daily sustenance, needing vocational training and small financial support to start a business and improve her economic situation."
     },
     {
-      image: "/category/economic_empowerment cas2.jpg",
+      image: "/category/economic_empowerment_cas2.jpg",
       title: "A young man from a poor family",
       description: "A young man from a poor family needs financial support and training to expand his handicraft business.",
       descriptionMax: "A young man in his twenties, raised in a poor family, couldn't continue his education due to financial issues. Despite excelling in handicrafts, he struggles to get the tools needed to expand his business. He requires financial support and training to develop his skills."
     },
     {
-      image: "/category/economic_empowerment cas3.jpg",
+      image: "/category/economic_empowerment_cas3.jpg",
       title: "Farmers in remote areas",
       description: "Farmers in remote areas need funding and training to access modern equipment and increase agricultural productivity.",
       descriptionMax: "Farmers in remote mountainous areas lack the resources and modern technology to increase their agricultural production. Despite their potential to boost productivity, they face financial and technical challenges. They need small funding to purchase modern equipment and training in modern farming techniques."
     },
     {
-      image: "/category/economic_empowerment cas4.jpg",
+      image: "/category/economic_empowerment_cas4.jpg",
       title: "An elderly woman lives alone",
       description: "An elderly woman in a small town needs social support and training to earn a sustainable income.",
       descriptionMax: "An elderly woman lives alone in a small town, without a stable income after retiring from her modest job. She faces social and economic marginalization. She needs social support to enhance her ability to earn additional income, such as training in handicrafts or new technologies to achieve a sustainable income."
     },
     {
-      image: "/category/economic_empowerment cas5.jpg",
+      image: "/category/economic_empowerment_cas5.jpg",
       title: "Empowering Young Women in Poor Communities Through Entrepreneurship",
       description: "Young women in poor communities need training and resources to start businesses.",
       descriptionMax: "A group of young women living in poor communities lack job opportunities or training. Despite their limited education, they are eager to learn new skills in areas such as graphic design or digital marketing, but face difficulties in accessing the necessary resources. They need training opportunities and guidance to secure independent jobs or start their own businesses."

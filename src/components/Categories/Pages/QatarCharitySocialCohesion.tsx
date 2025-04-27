@@ -18,31 +18,31 @@ const QatarCharitySocialCohesion = () => {
 
   const caseItems = [
     {
-      image: "/category/social_engagement cas1.jpg",
+      image: "/category/social_engagement_cas1.jpg",
       title: "Orphan Without Support After the Death of His Parents",
       description: "An orphaned child facing psychological distress and neglect due to his grandmother's poverty.",
       descriptionMax: "A 10-year-old child lost both of his parents in a tragic accident. He is currently living with his elderly grandmother, who has no resources to meet his needs. This situation puts him at great risk of school abandonment and social drift."
     },
     {
-      image: "/category/social_engagement cas2.jpg",
+      image: "/category/social_engagement_cas2.jpg",
       title: "A Family Living in Unhygienic Housing",
       description: "A family of six lives in a collapsing tin shack without electricity or clean water, enduring harsh weather year-round.",
       descriptionMax: "A family consisting of a father, mother, and four children lives in a tin shack that is at risk of collapsing. The house has no electricity or potable water, and the family members endure extreme weather conditions, both in winter and summer."
     },
     {
-      image: "/category/social_engagement cas3.jpg",
+      image: "/category/social_engagement_cas3.jpg",
       title: "Divorced Mother Living Under Threat",
       description: "A divorced mother, fleeing abuse, lives in temporary housing with her children, without income and facing social stigma.",
       descriptionMax: "A divorced mother, who was a victim of domestic violence, lives in temporary housing with her children after fleeing her marital home. She has no income and suffers from social marginalization and stigma."
     },
     {
-      image: "/category/social_engagement cas4.jpg",
+      image: "/category/social_engagement_cas4.jpg",
       title: "Elderly Person Living in Total Isolation",
       description: "An elderly, chronically ill man lives alone with no family and is unable to care for himself.",
       descriptionMax: "An elderly man in his sixties lives alone, suffering from chronic illnesses, with no family support or resources to cover healthcare costs. He needs continuous medical care, social support, or assistance with daily tasks."
     },
     {
-      image: "/category/social_engagement cas5.jpg",
+      image: "/category/social_engagement_cas5.jpg",
       title: "University Student Struggling with Poverty and Isolation",
       description: "A gifted student from a remote area endures extreme poverty and hunger in the city without any family support.",
       descriptionMax: "A brilliant young man from a mountainous region suffers from the high cost of living and rent in the city, receiving no support from his poor family, and living with only one meal per day."
@@ -137,7 +137,7 @@ const QatarCharitySocialCohesion = () => {
       </ToastContainer>
 
       {/* Donation Modal */}
-      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
           <div className="modal-content">
             <div className="modal-header">

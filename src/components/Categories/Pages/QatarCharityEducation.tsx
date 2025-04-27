@@ -20,31 +20,31 @@ const QatarCharityEducation = () => {
   // بيانات الحالات الخاصة (Case Special)
   const caseItems = [
     {
-      image: "/category/education cas1.jpg",
+      image: "/category/education_cas1.jpg",
       title: "Orphaned Child's Education Struggle",
       description: "An orphaned child living with his grandmother lacks resources to continue his education.",
       descriptionMax: "An orphaned child, having lost both his mother and father, lives with his elderly grandmother. He shows a strong desire to learn and succeed in school, but he is unable to afford school supplies and proper clothing."
     },
     {
-      image: "/category/education cas2.jpg",
+      image: "/category/education_cas2.jpg",
       title: "Girl with Disability Needs Educational Support",
       description: "A 10-year-old girl with paralysis needs support and transport for her education.",
       descriptionMax: "A 10-year-old girl with partial paralysis struggles with mobility and school access but has excellent intellectual abilities. She needs daily support and adapted transportation to continue her education."
     },
     {
-      image: "/category/education cas3.jpg",
+      image: "/category/education_cas3.jpg",
       title: "An Unemployed Father with Three School-Aged Children",
       description: "An unemployed father struggles to support his children's education.",
       descriptionMax: "A father, unemployed due to health issues, struggles to support his three children in school. They lack transportation, schoolbooks, and tutoring. Urgent Needs: Monthly financial aid for rent, utilities, and medication. Coverage for school transportation and textbooks. Regular food assistance."
     },
     {
-      image: "/category/education cas4.jpg",
+      image: "/category/education_cas4.jpg",
       title: "Final-Year Student Facing Risk of Dropping Out",
       description: "Rim, a dedicated medical student, faces eviction and dropping out due to financial struggles.",
       descriptionMax: "Rim, a top medical student, faces financial hardship, unable to afford housing, textbooks, and transportation. She risks eviction and dropping out, despite her dedication to becoming a pediatrician."
     },
     {
-      image: "/category/education cas5.jpg",
+      image: "/category/education_cas5.jpg",
       title: "Child in Remote Area with No School Nearby",
       description: "Youssef, 11, walks 10 km daily to school and needs transportation and winter clothing.",
       descriptionMax: "Youssef, an 11-year-old in a remote village, walks 10 km daily to school, facing harsh weather and exhaustion. He needs transportation, winter clothing, and access to a nearby school or boarding facility."
@@ -308,7 +308,7 @@ const QatarCharityEducation = () => {
       </ToastContainer>
 
       {/* Donation Modal */}
-      <div className="modal fade" id="donationModal" tabIndex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+      <div className="modal fade" id="donationModal" tabIndex={-1} aria-labelledby="donationModalLabel" aria-hidden="true">
         <div className="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
           <div className="modal-content">
             <div className="modal-header">

@@ -101,7 +101,7 @@ const Header = () => {
             style={{ width: "1px" }}
           ></li>
           <li className="nav-item d-none d-md-flex">
-            <a className="nav-link px-3 text-uppercase" href="/who-we-are">
+            <a className="nav-link px-3 text-uppercase" href="/Dash-Admin/Profile/index.html">
               Profile
             </a>
           </li>
