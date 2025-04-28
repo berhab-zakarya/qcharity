@@ -278,7 +278,7 @@ const SocialHousing = () => {
             <div className="col-sm-12 col-xl-6 mt-1">
               <p>International human rights law recognizes everyone's right to an adequate standard of living, including adequate housing.</p>
               <p>Unfortunately, more than 1.5 billion people still lack access to a place where they can live in security, peace and dignity and millions more lose their homes every year due to poverty and marginalization.</p>
-              <p>At Qatar Charity, we believe that housing is a foundation from which other legal entitlements can be achieved, and that the lack thereof impedes the ability of vulnerable groups to access health, education and employment opportunities, further deepening inequalities and exclusion of vulnerable groups.</p>
+              <p>At Takaful Charity, we believe that housing is a foundation from which other legal entitlements can be achieved, and that the lack thereof impedes the ability of vulnerable groups to access health, education and employment opportunities, further deepening inequalities and exclusion of vulnerable groups.</p>
             </div>
           </div>
         </div>

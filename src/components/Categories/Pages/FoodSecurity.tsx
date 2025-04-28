@@ -284,7 +284,7 @@ function FoodSecurity() {
               <div className="col-sm-12 col-xl-6 mt-1">
                 <p>Sustainable and resilient food systems are the main foundation for healthier societies.</p>
                 <p>Food security is achieved when all individuals in a particular group have access to quality, sustainable food in sufficient quantity to meet their basic needs. Unfortunately, global food security is bending under never-ending demographical, socio-economic, natural and geopolitical pressures such as the world population growth, scarcity of water and land resources and climate change.</p>
-                <p>As a consequence, the number of people affected by hunger continues to rise since 2014 while food security amongst most vulnerable population groups is expected to erode further due to the socio-economic and health impacts of the COVID-19 pandemic. Qatar Charity works with partners and communities to address the immediate concerns of food insecurity and to build lasting solutions to provide vulnerable populations with the physical and economic access to adequate, nutritious, safe, and culturally appropriate foods.</p>
+                <p>As a consequence, the number of people affected by hunger continues to rise since 2014 while food security amongst most vulnerable population groups is expected to erode further due to the socio-economic and health impacts of the COVID-19 pandemic. <b>Takaful Charity</b> works with partners and communities to address the immediate concerns of food insecurity and to build lasting solutions to provide vulnerable populations with the physical and economic access to adequate, nutritious, safe, and culturally appropriate foods.</p>
               </div>
             </div>
           </div>
@@ -292,7 +292,7 @@ function FoodSecurity() {
           <div className="container"></div>
         </section>
 
-        {/* Qatar Charity's Approach Section */}
+        {/* Takaful Charity's Approach Section */}
         <section id="QCdo">
           <div className="container">
             <div className="row fw-bold-xs">

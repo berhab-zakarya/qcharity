@@ -8,7 +8,7 @@ import CaseSpecial from '../CaseSpecial';
 import Voluntary from '../Voluntary';
 
 
-const QatarCharityHealthComponent = () => {
+const TakafulCharityHealthComponent = () => {
   const [donationType, setDonationType] = useState("1");
   const [paymentDetails, setPaymentDetails] = useState({
     date: '',
@@ -281,7 +281,7 @@ const QatarCharityHealthComponent = () => {
 
             <div className="col-sm-12 col-xl-6 mt-1">
               <p>Every day, 15,000 children under the age of 5 die from preventable and treatable diseases. Child mortality is only one of the many challenges faced by fragile communities in public health; Today, healthcare is all too often inaccessible because of poverty, marginalization, lack of primary healthcare facilities in addition to the frequent spread of infectious, endemic, and chronic diseases in underdeveloped regions.</p>
-              <p>Qatar Charity works with local communities and international partners to tackle the root causes of poor health, and to bring basic health services closer to those who need them most.</p>
+              <p>Takaful Charity works with local communities and international partners to tackle the root causes of poor health, and to bring basic health services closer to those who need them most.</p>
             </div>
           </div>
         </div>
@@ -459,13 +459,9 @@ const QatarCharityHealthComponent = () => {
         </div>
       </section>
 
-      
-
- 
-
       <Footer/>
     </>
   );
 };
 
-export default QatarCharityHealthComponent;
+export default TakafulCharityHealthComponent;

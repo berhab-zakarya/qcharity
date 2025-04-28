@@ -46,10 +46,10 @@ const WhoWeAre = () => {
           <div className="row justify-content-between mt-6">
             <div className="col-md-6 col-sm-12">
               <p>
-                <span className="first-letter-xxl">A</span> group of Qatari philanthropists, alarmed by the rising number of children orphaned by wars and conflicts in neighboring countries, came together to form a community initiative called
+                <span className="first-letter-xxl">A</span> group of Algerian philanthropists, alarmed by the rising number of children orphaned by wars and conflicts in neighboring countries, came together to form a community initiative called
               </p>
               <p className="h3 fw-normal f-ptSerif">
-                "The Committee of Qatar for Orphan Sponsorship".
+                "The Committee of Algeria for Orphan Sponsorship".
               </p>
             </div>
 
@@ -59,7 +59,7 @@ const WhoWeAre = () => {
               <p>
                 Eight years later, an international NGO was set up under the name
                 <span className="text-primary">
-                  "Qatar Charity"
+                  "Takaful"
                 </span>
                 to scale up the initiative, broaden its range of activities and augment its outreach.
               </p>
@@ -86,7 +86,7 @@ const WhoWeAre = () => {
 
           <div className="col-8 col-sm-8 offset-4 offset-sm-4 col-md-5 offset-md-7 mt-8 mt-md-0">
             <p className="h5 fw-normal">
-              Almost four decades later, Qatar Charity has grown to become one of the largest humanitarian and development organizations in the world, providing life-saving assistance to those hit by conflicts, persecution and natural disasters and creating durable solutions for poverty using sustainable development programs in social welfare, water and sanitation, education, nutrition and economic empowerment.
+              Almost four decades later, Takaful has grown to become one of the largest humanitarian and development organizations in the world, providing life-saving assistance to those hit by conflicts, persecution and natural disasters and creating durable solutions for poverty using sustainable development programs in social welfare, water and sanitation, education, nutrition and economic empowerment.
             </p>
           </div>
 
@@ -101,7 +101,7 @@ const WhoWeAre = () => {
               </p>
 
               <p className="mt-10">
-                Throughout the past five years, Qatar Charity reached
+                Throughout the past five years, Takaful reached
                 <span className="text-primary"> 29 million </span> people through large scale humanitarian and development projects with a total cost of 1.2 billion US Dollars.
               </p>
             </div>
@@ -227,7 +227,7 @@ const WhoWeAre = () => {
                   <div className="h5 fw-normal lh-base col-12 pt-lg-0 pt-10">
                     Components embedded in
                     <span className="text-primary">
-                      Qatar Charity's
+                      Takaful's
                     </span> programming
                   </div>
                   <div className="col-1 line-left-border line-top-border line-bottom-border mt-8 d-sm-none d-none d-xl-block" style={{ height: "250px" }}>

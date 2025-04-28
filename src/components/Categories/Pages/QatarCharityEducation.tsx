@@ -142,7 +142,7 @@ const QatarCharityEducation = () => {
 
             <div className="col-sm-12 col-xl-6 mt-1">
               <p>Quality education is one of the key principles underpinning the 2030 agenda. Sadly, nearly 300 million children around the world are deprived of this fundamental right.</p>
-              <p>The education challenge is becoming increasingly multifaceted, with many political and socio-economic factors contributing to its complexity: conflict is a major barrier with about 40% of out-of-school children living in conflict-affected countries; lack of education facilities, unqualified teachers, gender inequality, child labor and an unsafe learning environment all add to the misfortune of an entire generation, exposing hundreds of thousands of young girls and boys to all risks of abuse and harm. At Qatar Charity, we make education a priority to break the ongoing cycle of poverty.</p>
+              <p>The education challenge is becoming increasingly multifaceted, with many political and socio-economic factors contributing to its complexity: conflict is a major barrier with about 40% of out-of-school children living in conflict-affected countries; lack of education facilities, unqualified teachers, gender inequality, child labor and an unsafe learning environment all add to the misfortune of an entire generation, exposing hundreds of thousands of young girls and boys to all risks of abuse and harm. At Takaful Charity, we make education a priority to break the ongoing cycle of poverty.</p>
               <p>Our programs and projects provide empowering learning environments for children and young adults and increase their chance of a better future.</p>
             </div>
           </div>

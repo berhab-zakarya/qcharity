@@ -5,7 +5,7 @@ import Footer from '../../sections/Footer';
 import CaseSpecial from '../CaseSpecial';
 import Voluntary from '../Voluntary';
 
-const QatarCharitySocialCohesion = () => {
+const TakafulCharitySocialCohesion = () => {
   const [donationType, setDonationType] = useState("1");
   const [paymentDetails, setPaymentDetails] = useState({
     date: '',
@@ -277,7 +277,7 @@ const QatarCharitySocialCohesion = () => {
 
             <div className="col-sm-12 col-xl-6 mt-1">
               <p>Social cohesion lies at the heart of social development where strong, cohesive societies are built around universal values, reconciliation and tolerance. Unfortunately, in societies where the "social bond" that cements individuals together is eroded, intolerance, inequalities, racism and extremism thrive and ultimately lead to conflicts, violence and crime.</p>
-              <p>At Qatar Charity, we believe in the importance of economic, societal and educational means that provide a space for bringing divided groups together and addressing priority community needs, particularly in post-conflict settings in the context of peace-building.</p>
+              <p>At Takaful Charity, we believe in the importance of economic, societal and educational means that provide a space for bringing divided groups together and addressing priority community needs, particularly in post-conflict settings in the context of peace-building.</p>
             </div>
           </div>
         </div>
@@ -428,7 +428,7 @@ const QatarCharitySocialCohesion = () => {
               <button 
                 type="button" 
                 className="btn btn-lg btn-primary rounded-pill ml-6" 
-                onClick={() => window.location.href = 'https://www.qcharity.org/ar/qa/donation/generaldonationsearch?typeId=2&mostwaiting=&EnableSadaka=&EnableZakaa=&DonationsTypeId=0'}
+                onClick={() => window.location.href = 'https://www.qcharity.org/ar/dz/donation/generaldonationsearch?typeId=2&mostwaiting=&EnableSadaka=&EnableZakaa=&DonationsTypeId=0'}
               >
                 Donate Now
               </button>
@@ -452,4 +452,4 @@ const QatarCharitySocialCohesion = () => {
   );
 };
 
-export default QatarCharitySocialCohesion;
+export default TakafulCharitySocialCohesion;

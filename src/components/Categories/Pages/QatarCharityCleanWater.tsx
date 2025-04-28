@@ -344,7 +344,7 @@ function QatarCharityCleanWater() {
 
               <div className="col-12 offset-xl-3 col-xl-7">
                 <h1>Our objectives</h1>
-                <p>Qatar Charity's water and sanitation programming strategy aims to:</p>
+                <p>Takaful Charity's water and sanitation programming strategy aims to:</p>
                 <p>
                   • Improve access to clean water and sanitation services<br />
                   • Prevent water-borne diseases<br />
@@ -357,7 +357,7 @@ function QatarCharityCleanWater() {
 
                 <h1>Our efforts</h1>
                 <p>Water projects allow the basic needs of families to be met: health, nutrition and education. More importantly, access to viable sanitation makes the economic development of entire villages possible through agricultural activities.</p>
-                <p>In 2019, Qatar Charity implemented more than 9,900 water projects, ensuring the local communities are trained in sanitation and hygiene, and establishing local committees to ensure the continuity and sustainability of the projects. These water and sanitation facilities have brought 6 million people closer to a water point in 44 countries.</p>
+                <p>In 2019, Takaful Charity implemented more than 9,900 water projects, ensuring the local communities are trained in sanitation and hygiene, and establishing local committees to ensure the continuity and sustainability of the projects. These water and sanitation facilities have brought 6 million people closer to a water point in 44 countries.</p>
 
                 <h1>Areas of Intervention</h1>
                 <p>• Surface wells.</p>

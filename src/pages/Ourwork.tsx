@@ -330,7 +330,7 @@ const SocialWelfare = () => {
                 Since inception,
               </p>
               <p>
-                Qatar charity has made child sponsorship its flagship program to
+              Takaful Charity has made child sponsorship its flagship program to
                 fight poverty at its source and to give children and their
                 families a safe and enabling environment where they can thrive
                 and prosper.

@@ -289,7 +289,7 @@ const EconomicEmpowerment = () => {
               <p>Unemployment and underemployment lies at the core of poverty and today, more than 736 million people live below the international poverty line.</p>
               <p>Poverty manifestations include hunger and malnutrition, limited access to education and basic services, social discrimination and exclusion, as well as the lack of participation in decision-making and in the global economic processes.</p>
               <p>The Covid-19 pandemic exacerbated what already was a catastrophic economic outlook for millions and affected 81% of employers pushing millions of workers into unemployment, underemployment and working poverty.</p>
-              <p>While vulnerable populations have long been passive recipients of aid, further exacerbating their economic uncertainty, Qatar Charity envisions empowered communities with a self-sustained productive capacity and a sustainable earning power.</p>
+              <p>While vulnerable populations have long been passive recipients of aid, further exacerbating their economic uncertainty, <b>Takaful Charity</b> envisions empowered communities with a self-sustained productive capacity and a sustainable earning power.</p>
             </div>
           </div>
         </div>
