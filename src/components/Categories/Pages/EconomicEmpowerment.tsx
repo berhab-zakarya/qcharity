@@ -17,7 +17,7 @@ const EconomicEmpowerment = () => {
   });
   const [showToast, setShowToast] = useState(false);
 
-  // بيانات الحالات الخاصة
+  
   const caseItems = [
     {
       
@@ -304,7 +304,7 @@ const EconomicEmpowerment = () => {
             <div className="col-12">
               <div className="row fw-bold-xs">
                 <div className="col-12">
-                  <p className="display-2 f-ptSerif">Qatar Charity's<span className="text-primary text-uppercase"> approach </span></p>
+                  <p className="display-2 f-ptSerif">Takaful Charity's<span className="text-primary text-uppercase"> approach </span></p>
                   <div className="col-xl-8 offset-xl-4 col-md-8 offset-md-4 col-12 mt-md-7 mb-12 mb-md-0">
                     <p className="display-2 f-ptSerif">to the global <span className="text-yellow-background">poverty challenges</span></p>
                   </div>

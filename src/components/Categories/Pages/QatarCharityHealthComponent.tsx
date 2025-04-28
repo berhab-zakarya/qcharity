@@ -295,7 +295,7 @@ const QatarCharityHealthComponent = () => {
             <div className="col-12">
               <div className="row fw-bold-xs">
                 <div className="col-12">
-                  <p className="display-2 f-ptSerif">Qatar Charity's<span className="text-primary text-uppercase"> approach </span></p>
+                  <p className="display-2 f-ptSerif">Takaful Charity's<span className="text-primary text-uppercase"> approach </span></p>
                   <div className="col-xl-8 offset-xl-4 col-md-8 offset-md-4 col-12 mt-md-7 mb-12 mb-md-0">
                     <p className="display-2 f-ptSerif">to the global <span className="text-yellow-background">health challenges</span></p>
                   </div>
@@ -459,51 +459,7 @@ const QatarCharityHealthComponent = () => {
         </div>
       </section>
 
-      <section>
-        <hr className="pulits-hr mb-17" />
-        <div className="container">
-          <div className="row justify-content-between">
-            <div className="col-12 mb-8 mb-md-12">
-              <p className="col display-4 d-inline-flex fw-bolder text-uppercase">
-                How
-              </p>
-              <p className="d-inline-flex">
-                <img className="d-inline-flex mt-n-3" src="../../../content/QCGlobal/images/smaile-icon.svg" width="80" alt="Smile icon" />
-              </p>
-              <p className="display-6 text-uppercase fw-medium">
-                we change lives
-              </p>
-            </div>
-            <div className="col-lg-6 col-12 d-sm-block d-lg-none pb-7">
-              <img className="col-12" src="https://www.qcharity.org/Exportpath/WebStorySuccessStory/2021/2/WASHsuccessstory2.jpg" alt="Success story" />
-            </div>
-            <div className="row align-items-end mb-xl-12 mb-9">
-              <div className="col-lg-5 col-12">
-                <p className="display-6 f-ptSerif fw-normal">
-                  Fighting blindness in Bangladesh.
-                </p>
-                <p className="h6 fw-normal lh-base mt-8">
-                  In October 2015, Qatar Charity launched a fundraising campaign to support the sight-saving work of Orbis in Bangladesh.
-                  There are 7.4 million people in Bangladesh who are blind or visually impaired. Cataract is the most common cause of blindness there and around 5,000 children are diagnosed each year. While cataract is easily treated with surgery, 75%
-                </p>
-                <p>
-                  <button type="button" className="btn btn-outline-primary rounded-pill mt-10">
-                    Read More
-                    &nbsp;
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="10" viewBox="0 0 32 14">
-                      <path id="Path_16210" data-name="Path 16210" d="M3.414,19.988H9a1.278,1.278,0,0,1,.223.025,1.04,1.04,0,0,1,.7,1.358,1.018,1.018,0,0,1-.812.611A.832.832,0,0,1,9,21.988H.944a.821.821,0,0,1-.111-.013A1.023,1.023,0,0,1,.006,21.1,1.037,1.037,0,0,1,0,20.988v-8a1.036,1.036,0,0,1,1.383-.924,1.023,1.023,0,0,1,.611.812A1.051,1.051,0,0,1,2,12.988v5.586L20.294.28a1.939,1.939,0,0,1,.175-.139,1.028,1.028,0,0,1,1.476.516,1.011,1.011,0,0,1-.1.862,1.964,1.964,0,0,1-.14.176L3.414,19.988Z" transform="translate(15.504 22.586) rotate(-135)" fill="currentColor"></path>
-                    </svg>
-                  </button>
-                </p>
-                <hr className="mt-11 mb-0" />
-              </div>
-              <div className="col-lg-6 col-12 d-none d-lg-block">
-                <img className="col-12" src="https://www.qcharity.org/Exportpath/WebStorySuccessStory/2021/2/WASHsuccessstory2.jpg" alt="Success story" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
  
 

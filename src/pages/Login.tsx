@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Toast, ToastContainer } from "react-bootstrap";
 
 
 export default function LoginComponent() {
@@ -17,7 +18,7 @@ export default function LoginComponent() {
 
     // Check for regular user credentials
     if (userInput === "boumediniahmad@mail.com" && password === "usertest123") {
-      window.location.href = "/Dash-Admin/Profile/index.html";
+      window.location.href = "/";
       return;
     }
 
@@ -55,11 +56,17 @@ export default function LoginComponent() {
     healthState: ''
   });
 
+  const [showToast, setShowToast] = useState(false);
+
   const handleRegisterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Registration data:', registerData);
-    // Add your registration logic here
     setShowRegister(false);
+    setShowToast(true);
+    setTimeout(() => {
+      setShowToast(false);
+      window.location.href = "/";
+    }, 2500);
   };
 
   // Update the modal dialog styles in the registerModal constant
@@ -512,6 +519,17 @@ export default function LoginComponent() {
       </div>
       {/* Add modal to the DOM */}
       {registerModal}
+      {/* Toast for registration success */}
+      <ToastContainer position="bottom-end" className="p-3" style={{ zIndex: 9999 }}>
+        <Toast show={showToast} onClose={() => setShowToast(false)} bg="success" delay={2000} autohide>
+          <Toast.Header>
+            <strong className="me-auto">Registration Successful</strong>
+          </Toast.Header>
+          <Toast.Body className="text-white">
+            Your account has been created successfully! Redirecting to Home...
+          </Toast.Body>
+        </Toast>
+      </ToastContainer>
     </div>
   );
 }

@@ -349,7 +349,7 @@ const SocialWelfare = () => {
               <div className="row fw-bold-xs">
                 <div className="col-12">
                   <p className="display-2 f-ptSerif">
-                    Qatar Charity&#39;s
+                  Takaful Charity&#39;s
                     <span className="text-primary text-uppercase">
                       {" "}
                       approach{" "}
